@@ -1,0 +1,15 @@
+﻿NormalLoginText#登陆ip
+NormalPortText#登陆端口
+language#语言
+TestServerIpText#测试流程里面的服务器ip
+TestLoginIpText#登陆ip
+TestServerPortText#登陆端口
+TestLoginPortText
+language_test
+NoticeTitle#公告title
+NoticeContent#公告内容
+Notice1#登陆界面公告1
+Notice2
+Notice3
+Notice4
+Notice5
