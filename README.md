@@ -1,0 +1,2 @@
+# ResourcesConfig
+Null
