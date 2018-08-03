@@ -1,2 +1,3 @@
 # ResourcesConfig
-Null
+A commission remote Version Control tool.
+
