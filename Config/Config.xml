@@ -6,16 +6,13 @@
     <account>yzry_yanfa_upload_cdn</account>
     <pwd>eniyAVYLy6nkRKN1iQTdf0WzqGlXDn6q</pwd>
   </ftp>
-  <platform name="_____勇者____测试用" type="Android">
-    <ftpUrl>/android/test/RemoteVersion.xml</ftpUrl>
+  <platform name="_____测试____华为" type="Android">
+    <ftpUrl>/YZTest/huawei/RemoteVersion.xml</ftpUrl>
   </platform>
-  <platform name="_____勇者____yumoon（腾讯众测）" type="Android">
-    <ftpUrl>/android/yumoon/RemoteVersion.xml</ftpUrl>
+  <platform name="_____测试____魅族" type="Android">
+    <ftpUrl>/YZTest/meizu/RemoteVersion.xml</ftpUrl>
   </platform>
-  <platform name="_____勇者____雨墨" type="Android">
-    <ftpUrl>/android/yumo/RemoteVersion.xml</ftpUrl>
-  </platform>
-  <platform name="_____勇者____UC" type="Android">
-    <ftpUrl>/android/uc/RemoteVersion.xml</ftpUrl>
+  <platform name="_____测试____小米" type="Android">
+    <ftpUrl>/YZTest/xiaomi/RemoteVersion.xml</ftpUrl>
   </platform>
 </project>
