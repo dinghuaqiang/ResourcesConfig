@@ -8,3 +8,12 @@ F:\ResourcesConfig\obj\Debug\ResourceConfig.csproj.GenerateResource.cache
 F:\ResourcesConfig\obj\Debug\ResourceConfig.csproj.CoreCompileInputs.cache
 F:\ResourcesConfig\obj\Debug\ResourceConfig.exe
 F:\ResourcesConfig\obj\Debug\ResourceConfig.pdb
+H:\VSWorkspace\ResourcesConfig\bin\Debug\ResourceConfig.exe.config
+H:\VSWorkspace\ResourcesConfig\obj\Debug\ResourceConfig.exe
+H:\VSWorkspace\ResourcesConfig\obj\Debug\ResourceConfig.pdb
+H:\VSWorkspace\ResourcesConfig\bin\Debug\ResourceConfig.exe
+H:\VSWorkspace\ResourcesConfig\bin\Debug\ResourceConfig.pdb
+H:\VSWorkspace\ResourcesConfig\obj\Debug\ResourceConfig.csprojResolveAssemblyReference.cache
+H:\VSWorkspace\ResourcesConfig\obj\Debug\ResourceConfig.Form1.resources
+H:\VSWorkspace\ResourcesConfig\obj\Debug\ResourceConfig.Properties.Resources.resources
+H:\VSWorkspace\ResourcesConfig\obj\Debug\ResourceConfig.csproj.GenerateResource.Cache

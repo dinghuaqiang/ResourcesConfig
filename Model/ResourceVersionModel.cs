@@ -286,7 +286,7 @@ namespace ResourceConfig.Model
             }
             catch (System.Exception ex)
             {
-                Form1.g_Context.ErrorMsg.Text = ex.Message;
+                Form1.g_Context.ErrorMsg.Text = ex.Message + ex.Source.ToString();
             }
         }
 

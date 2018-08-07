@@ -7,6 +7,7 @@
     <Version>2.1.6</Version>
     <url>https://play.google.com/store/apps/details?id=com.yzpx.twgp</url>
     <size>160921542</size>
+    <ResVersion>1.3.7</ResVersion>
   </CodeVersion_last>
   <!--登陆服务器-->
   <loginSever>
@@ -23,6 +24,9 @@
     <big_app_version>1.3.7</big_app_version>
     <!--大包的准入版本-->
     <small_app_version>2.0.0</small_app_version>
+    <!--取ip地址的服务器的PORT -1表示不连接取ip的服务器 -->
+    <app_current_version>2.1.6</app_current_version>
+    <app_res_version>1.3.8</app_res_version>
     <!--小包的准入版本-->
     <login_Ip>183.61.84.138</login_Ip>
     <!--测试服务器IP   fanxian.testgs.conn.553.com -->
@@ -31,8 +35,6 @@
     <get_client_ip_server_ip>183.60.44.5</get_client_ip_server_ip>
     <!--取ip地址的服务器的IP   如果是no 则表示没有该服务器IP-->
     <get_client_ip_server_port>-1</get_client_ip_server_port>
-    <!--取ip地址的服务器的PORT -1表示不连接取ip的服务器 -->
-    <app_current_version>2.1.6</app_current_version>
     <!--最新的app版本-->
     <app_update_url>https://play.google.com/store/apps/details?id=com.yzpx.twgp</app_update_url>
     <test_size>160921542</test_size>
@@ -135,7 +137,4 @@
     <PatchFileMD5>c92b75aa0f2d4bbf43a58e5639081da4</PatchFileMD5>
     <FileSize>28248051</FileSize>
   </VersionPatch>
-  <notice>
-    <message>1.资料片6.3更新公告</message>
-  </notice>
 </ResourceVersion>
