@@ -17,6 +17,7 @@ namespace ResourceConfig.Model
 
         public NormalFlow m_NormalFlow;
         public TestFlow m_TestFlow;
+        public NoticeModel m_NoticeModel;
         public WhiteListModel m_WhiteListModel;
 
         public void clean()
@@ -130,17 +131,38 @@ namespace ResourceConfig.Model
                 }
 
                 XmlNode versionNode = dom.SelectSingleNode("ResourceVersion/CodeVersion_last/Version");
-                XmlNode resVersionNode = dom.SelectSingleNode("ResourceVersion/CodeVersion_last/ResVersion");
                 XmlNode urlNode = dom.SelectSingleNode("ResourceVersion/CodeVersion_last/url");
                 XmlNode sizeNode = dom.SelectSingleNode("ResourceVersion/CodeVersion_last/size");
+                XmlNode login_IpNode = dom.SelectSingleNode("ResourceVersion/loginSever/login_Ip");
+                XmlNode login_PortNode = dom.SelectSingleNode("ResourceVersion/loginSever/login_Port");
+                try
+                {
+                    XmlNode languageNode = dom.SelectSingleNode("ResourceVersion/loginSever/language");
+                    if (languageNode != null)
+                    {
+                        m_NormalFlow.language = languageNode.InnerText;
+                    }
+
+                }
+                catch (System.Exception ex)
+                {
+                	
+                }
+                XmlNodeList validVersionList = dom.SelectNodes("ResourceVersion/ValidVersion/version");
+                foreach (XmlNode version in validVersionList)
+                {
+                    m_NormalFlow.validVersionList.Add(version.InnerText.Trim());
+                }
 
                 m_NormalFlow.appVersion = versionNode.InnerText;
-                m_NormalFlow.resVersion = resVersionNode.InnerText;
                 m_NormalFlow.url = urlNode.InnerText;
                 if (sizeNode != null)
                 {
                     m_NormalFlow.appSize = sizeNode.InnerText;
                 }
+                
+                m_NormalFlow.loginIP = login_IpNode.InnerText;
+                m_NormalFlow.loginPort = login_PortNode.InnerText;
 
                 if (!forPaste)
                 {
@@ -262,11 +284,38 @@ namespace ResourceConfig.Model
 
                 XmlNode big_app_version = dom.SelectSingleNode("ResourceVersion/test_tag/big_app_version");
                 XmlNode small_app_version = dom.SelectSingleNode("ResourceVersion/test_tag/small_app_version");
+                XmlNode login_Ip = dom.SelectSingleNode("ResourceVersion/test_tag/login_Ip");
+                XmlNode login_Port = dom.SelectSingleNode("ResourceVersion/test_tag/login_Port");
+                XmlNode get_client_ip_server_ip = dom.SelectSingleNode("ResourceVersion/test_tag/get_client_ip_server_ip");
+                XmlNode get_client_ip_server_port = dom.SelectSingleNode("ResourceVersion/test_tag/get_client_ip_server_port");
                 XmlNode app_current_version = dom.SelectSingleNode("ResourceVersion/test_tag/app_current_version");
-                XmlNode app_res_version = dom.SelectSingleNode("ResourceVersion/test_tag/app_res_version");
                 XmlNode app_update_url = dom.SelectSingleNode("ResourceVersion/test_tag/app_update_url");
                 XmlNode test_size = dom.SelectSingleNode("ResourceVersion/test_tag/test_size");
-                
+
+                try
+                {
+                    XmlNode languageNode = dom.SelectSingleNode("ResourceVersion/test_tag/language");
+                    if (languageNode != null)
+                    {
+                        m_TestFlow.language_test = languageNode.InnerText;
+                    }
+
+                }
+                catch (System.Exception ex)
+                {
+
+                }
+                XmlNodeList validVersionList = dom.SelectNodes("ResourceVersion/ValidVersion/version");
+                if (validVersionList != null)
+                {
+                    foreach (XmlNode version in validVersionList)
+                    {
+                        m_TestFlow.validVersionList.Add(version.InnerText.Trim());
+                    }
+                }
+
+                m_TestFlow.loginIP = login_Ip.InnerText;
+                m_TestFlow.loginPort = login_Port.InnerText;
                 m_TestFlow.url = app_update_url.InnerText;
                 if (test_size != null)
                 {
@@ -274,9 +323,10 @@ namespace ResourceConfig.Model
                 }
 
                 m_TestFlow.appVersion = app_current_version.InnerText;
-                m_TestFlow.resVersion = app_res_version.InnerText;
                 m_TestFlow.bigVersion = big_app_version.InnerText;
                 m_TestFlow.smallVersion = small_app_version.InnerText;
+                m_TestFlow.serverIP = get_client_ip_server_ip.InnerText;
+                m_TestFlow.serverPort = get_client_ip_server_port.InnerText;
 
                 
                 if (!forPaste)
@@ -286,13 +336,24 @@ namespace ResourceConfig.Model
             }
             catch (System.Exception ex)
             {
-                Form1.g_Context.ErrorMsg.Text = ex.Message + ex.Source.ToString();
+                Form1.g_Context.ErrorMsg.Text = ex.Message;
             }
         }
 
         public void parseNoticeFlow(string manifestFile, bool forPaste)
         {
             m_TempManifestPath = manifestFile;
+
+            if (m_NoticeModel != null)
+            {
+                m_NoticeModel.clean();
+            }
+            else
+            {
+                m_NoticeModel = new NoticeModel();
+            }
+
+
             FileInfo fileInfo = new FileInfo(manifestFile);
             if (!fileInfo.Exists)
             {
@@ -314,6 +375,23 @@ namespace ResourceConfig.Model
 
                 XmlNode game_notice_title = dom.SelectSingleNode("ResourceVersion/game_notice_title");
                 XmlNode game_notice_message = dom.SelectSingleNode("ResourceVersion/game_notice_message");
+                XmlNodeList notice = dom.SelectNodes("ResourceVersion/notice");
+
+                m_NoticeModel.m_NoticeTitle = game_notice_title.InnerText;
+                m_NoticeModel.m_NoticeContent = game_notice_message.InnerText;
+
+                int count = 0;
+                foreach (XmlNode node in notice)
+                {
+                    string msg = node.SelectSingleNode("./message").InnerText;
+                    m_NoticeModel.NoticeList[count].Text = msg;
+                    count++;
+
+                    if (count > m_NoticeModel.NoticeList.Count)
+                    {
+                        break;
+                    }
+                }
 
                 if (!forPaste)
                 {
@@ -400,6 +478,7 @@ namespace ResourceConfig.Model
             {
                 m_NormalFlow.setText();
                 m_TestFlow.setText();
+                m_NoticeModel.setText();
                 m_WhiteListModel.setText();
             }
         }
@@ -518,24 +597,70 @@ namespace ResourceConfig.Model
                     FileSize.InnerText = model.fileSize;
                 }
 
+                //添加生效版本的配置
+                XmlNodeList versionList = dom.SelectNodes("ResourceVersion/ValidVersion/version");
+                foreach (XmlNode verNode in versionList)
+                {
+                    verNode.ParentNode.RemoveChild(verNode);
+                }
+
+                XmlNode verRoot = dom.SelectSingleNode("ResourceVersion/ValidVersion");
+                foreach (string value in m_NormalFlow.validVersionList)
+                {
+                    XmlNode node = dom.CreateElement("version");
+                    node.InnerText = value;
+                    verRoot.AppendChild(node);
+                }
+
                 XmlNode versionNode = dom.SelectSingleNode("ResourceVersion/CodeVersion_last/Version");
-                XmlNode resVersionNode = dom.SelectSingleNode("ResourceVersion/CodeVersion_last/ResVersion");
                 XmlNode urlNode = dom.SelectSingleNode("ResourceVersion/CodeVersion_last/url");
                 XmlNode sizeNode = dom.SelectSingleNode("ResourceVersion/CodeVersion_last/size");
+                XmlNode login_IpNode = dom.SelectSingleNode("ResourceVersion/loginSever/login_Ip");
+                XmlNode login_PortNode = dom.SelectSingleNode("ResourceVersion/loginSever/login_Port");
 
                 SetNodeInnerText(dom, rootNode, "ForceUpdate", "" + m_NormalFlow.forceUpdate);
 
+                XmlNode languageNode = null;
+                try
+                {
+                    languageNode = dom.SelectSingleNode("ResourceVersion/loginSever/language");
+                    if (languageNode != null)
+                    {
+                        languageNode.InnerText = m_NormalFlow.language;
+                    }
+                    else
+                    {
+                        languageNode = dom.CreateElement("language");
+                        languageNode.InnerText = m_NormalFlow.language;
+                        XmlNode login_Server = dom.SelectSingleNode("ResourceVersion/loginSever");
+                        login_Server.AppendChild(languageNode);
+
+                    }
+
+                }
+                catch (System.Exception ex)
+                {
+                    languageNode = dom.CreateElement("language");
+                    languageNode.InnerText = m_NormalFlow.language;
+                    XmlNode login_Server = dom.SelectSingleNode("ResourceVersion/loginSever");
+                    login_Server.AppendChild(languageNode);
+                }
+
                 versionNode.InnerText = m_NormalFlow.appVersion;
-                resVersionNode.InnerText = m_NormalFlow.resVersion;
                 urlNode.InnerText = m_NormalFlow.url;
                 if(sizeNode != null)
                 {
                     sizeNode.InnerText = m_NormalFlow.appSize;
                 }
+                
+                login_IpNode.InnerText = m_NormalFlow.loginIP;
+                login_PortNode.InnerText = m_NormalFlow.loginPort;
+
                 dom.Save(m_TempManifestPath);
             }
             catch (System.Exception ex)
             {
+                Form1.g_Context.ErrorMsg.Text = ex.StackTrace;
                 MessageBox.Show(ex.Message);
             }
         }
@@ -658,10 +783,40 @@ namespace ResourceConfig.Model
 
                 XmlNode big_app_version = dom.SelectSingleNode("ResourceVersion/test_tag/big_app_version");
                 XmlNode small_app_version = dom.SelectSingleNode("ResourceVersion/test_tag/small_app_version");
+                XmlNode login_Ip = dom.SelectSingleNode("ResourceVersion/test_tag/login_Ip");
+                XmlNode login_Port = dom.SelectSingleNode("ResourceVersion/test_tag/login_Port");
+                XmlNode get_client_ip_server_ip = dom.SelectSingleNode("ResourceVersion/test_tag/get_client_ip_server_ip");
+                XmlNode get_client_ip_server_port = dom.SelectSingleNode("ResourceVersion/test_tag/get_client_ip_server_port");
                 XmlNode app_current_version = dom.SelectSingleNode("ResourceVersion/test_tag/app_current_version");
-                XmlNode app_res_version = dom.SelectSingleNode("ResourceVersion/test_tag/app_res_version");
                 XmlNode app_update_url = dom.SelectSingleNode("ResourceVersion/test_tag/app_update_url");
                 XmlNode test_size = dom.SelectSingleNode("ResourceVersion/test_tag/test_size");
+
+                XmlNode languageNode = null;
+                try
+                {
+                    languageNode = dom.SelectSingleNode("ResourceVersion/test_tag/language");
+                    if (languageNode != null)
+                    {
+                        languageNode.InnerText = m_TestFlow.language_test;
+                    }
+                    else
+                    {
+                        languageNode = dom.CreateElement("language");
+                        languageNode.InnerText = m_TestFlow.language_test;
+                        rootNode.AppendChild(languageNode);
+
+                    }
+
+                }
+                catch (System.Exception ex)
+                {
+                    languageNode = dom.CreateElement("language");
+                    languageNode.InnerText = m_TestFlow.language_test;
+                    rootNode.AppendChild(languageNode);
+                }
+
+                login_Ip.InnerText = m_TestFlow.loginIP;
+                login_Port.InnerText = m_TestFlow.loginPort;
                 app_update_url.InnerText = m_TestFlow.url;
                 if (test_size != null)
                 {
@@ -671,7 +826,8 @@ namespace ResourceConfig.Model
                 app_current_version.InnerText = m_TestFlow.appVersion;
                 big_app_version.InnerText = m_TestFlow.bigVersion;
                 small_app_version.InnerText = m_TestFlow.smallVersion;
-                app_res_version.InnerText = m_TestFlow.resVersion;
+                get_client_ip_server_ip.InnerText = m_TestFlow.serverIP;
+                get_client_ip_server_port.InnerText = m_TestFlow.serverPort;
 
                 dom.Save(m_TempManifestPath);
             }
@@ -695,11 +851,32 @@ namespace ResourceConfig.Model
                 XmlNode game_notice_message = dom.SelectSingleNode("ResourceVersion/game_notice_message");
                 XmlNodeList notice = dom.SelectNodes("ResourceVersion/notice");
 
+                game_notice_title.InnerText = m_NoticeModel.m_NoticeTitle;
+                game_notice_message.InnerText = m_NoticeModel.m_NoticeContent;
+
                 XmlNodeList patchList = dom.SelectNodes("ResourceVersion/notice");
                 foreach (XmlNode patchNode in patchList)
                 {
                     patchNode.ParentNode.RemoveChild(patchNode);
                 }
+
+                foreach (TextBox node in m_NoticeModel.NoticeList)
+                {
+                    string msg = node.Text;
+                    if (msg.Trim() == "")
+                    {
+                        continue;
+                    }
+
+                    XmlNode noticeNode = dom.CreateElement("notice");
+                    XmlNode msgNode = dom.CreateElement("message");
+                    noticeNode.AppendChild(msgNode);
+                    rootNode.AppendChild(noticeNode);
+
+                    msgNode.InnerText = node.Text;
+
+                }
+
                 dom.Save(m_TempManifestPath);
             }
             catch (System.Exception ex)

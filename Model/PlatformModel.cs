@@ -10,5 +10,7 @@ namespace ResourceConfig.Model
         public string m_Name;
         public string m_Type;
         public string m_Url;
+
+        public bool m_isDownloadSuccess;
     }
 }

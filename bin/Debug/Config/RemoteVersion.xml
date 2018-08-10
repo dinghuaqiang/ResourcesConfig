@@ -1,13 +1,11 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ResourceVersion>
   <!-- server list, use when login -->
   <serverListURL>http://serverlist.funcell123.com/serverlist</serverListURL>
   <!--app版本和升级地址-->
   <CodeVersion_last>
-    <Version>2.1.6</Version>
-    <url>https://play.google.com/store/apps/details?id=com.yzpx.twgp</url>
-    <size>160921542</size>
-    <ResVersion>1.3.7</ResVersion>
+    <Version>1.1.1</Version>
+    <url>http://fanxian.cdn.download.553.com/ares/v1.1.1/Ares_Android_xmr_1.1.1_pkg1_0201412222224.apk</url>
   </CodeVersion_last>
   <!--登陆服务器-->
   <loginSever>
@@ -21,12 +19,9 @@
   <!--给其他平台(pp等)测试使用，可以指定测试服务器，可以指定需要的升级包-->
   <test_tag>
     <serverListURL>http://serverlist.funcell123.com/serverlist</serverListURL>
-    <big_app_version>1.3.7</big_app_version>
+    <big_app_version>1.1.1</big_app_version>
     <!--大包的准入版本-->
-    <small_app_version>2.0.0</small_app_version>
-    <!--取ip地址的服务器的PORT -1表示不连接取ip的服务器 -->
-    <app_current_version>2.1.6</app_current_version>
-    <app_res_version>1.3.8</app_res_version>
+    <small_app_version>1.1.0</small_app_version>
     <!--小包的准入版本-->
     <login_Ip>183.61.84.138</login_Ip>
     <!--测试服务器IP   fanxian.testgs.conn.553.com -->
@@ -35,9 +30,10 @@
     <get_client_ip_server_ip>183.60.44.5</get_client_ip_server_ip>
     <!--取ip地址的服务器的IP   如果是no 则表示没有该服务器IP-->
     <get_client_ip_server_port>-1</get_client_ip_server_port>
+    <!--取ip地址的服务器的PORT -1表示不连接取ip的服务器 -->
+    <app_current_version>1.1.1</app_current_version>
     <!--最新的app版本-->
-    <app_update_url>https://play.google.com/store/apps/details?id=com.yzpx.twgp</app_update_url>
-    <test_size>160921542</test_size>
+    <app_update_url>http://fanxian.cdn.download.553.com/ares/v1.1.1/Ares_Android_xmr_1.1.1_pkg1_0201412222224.apk</app_update_url>
     <!--新包一键安装地址-->
     <!--新的资源补丁包-->
     <!--合法的测试客户端的ip-->
@@ -50,13 +46,20 @@
     </legal_client_ip_list>
     <!---->
     <legal_client_user_list>
-      <legal_client_user>//1.3.2:true</legal_client_user>
-      <legal_client_user>2.0.0:true</legal_client_user>
-      <legal_client_user>1.3.7:true</legal_client_user>
-      <legal_client_user>2.1.3:true</legal_client_user>
-      <legal_client_user>2.1.4:true</legal_client_user>
-      <legal_client_user>2.1.5:true</legal_client_user>
-      <legal_client_user>2.1.6:true</legal_client_user>
+      <legal_client_user>tom</legal_client_user>
+      <legal_client_user>ccbc11</legal_client_user>
+      <legal_client_user>wwzzqq</legal_client_user>
+      <legal_client_user>wwzzqq1</legal_client_user>
+      <legal_client_user>tepp01</legal_client_user>
+      <legal_client_user>te55301</legal_client_user>
+      <legal_client_user>tr130502205820</legal_client_user>
+      <legal_client_user>//1.1.0:true</legal_client_user>
+      <legal_client_user>//旧的</legal_client_user>
+      <legal_client_user>183.61.84.248  64801</legal_client_user>
+      <legal_client_user>//新的</legal_client_user>
+      <legal_client_user>183.61.84.138 64807</legal_client_user>
+      <legal_client_user>te055</legal_client_user>
+      <legal_client_user>chao597076733</legal_client_user>
     </legal_client_user_list>
     <!--合法的测试客户端的机器 	<legal_client_machine>F4:1B:A1:D2:C0:78</legal_client_machine>
 		<legal_client_machine>20:7D:74:7E:AE:94</legal_client_machine>
@@ -65,76 +68,134 @@
 			<legal_client_machine>20:7D:74:90:F8:6A</legal_client_machine>-->
     <legal_client_machine_list>
       <legal_client_machine>28:CF:E9:D4:A4:C9</legal_client_machine>
-      <legal_client_machine>//862949022028737</legal_client_machine>
-      <legal_client_machine>865166020149848</legal_client_machine>
-      <legal_client_machine>//862949022028737</legal_client_machine>
-      <legal_client_machine>//865166020149848</legal_client_machine>
-      <legal_client_machine>//868263023975670</legal_client_machine>
-      <legal_client_machine>//99000566561374</legal_client_machine>
-      <legal_client_machine>//0C:1D:AF:DA:3D:19</legal_client_machine>
-      <legal_client_machine>//865863025325429</legal_client_machine>
-      <legal_client_machine>//355066063622825</legal_client_machine>
-      <legal_client_machine>863033010159702</legal_client_machine>
-      <legal_client_machine>//355060064493989</legal_client_machine>
-      <legal_client_machine>//864103029270243</legal_client_machine>
-      <legal_client_machine>//863033010159702</legal_client_machine>
-      <legal_client_machine>//868263023975670</legal_client_machine>
-      <legal_client_machine>861406039215089</legal_client_machine>
-      <legal_client_machine>860988031693547</legal_client_machine>
-      <legal_client_machine>867664026615448</legal_client_machine>
-      <legal_client_machine>353769059221609</legal_client_machine>
-      <legal_client_machine>355060064493989</legal_client_machine>
-      <legal_client_machine>861406039215097</legal_client_machine>
-      <legal_client_machine>355521075503819</legal_client_machine>
-      <legal_client_machine>861413035952244</legal_client_machine>
-      <legal_client_machine>864103029270243</legal_client_machine>
-      <legal_client_machine>864325038344970</legal_client_machine>
-      <legal_client_machine>864341031526505</legal_client_machine>
-      <legal_client_machine>864341031526513</legal_client_machine>
-      <legal_client_machine>867391031442580</legal_client_machine>
-      <legal_client_machine>867391031442598</legal_client_machine>
+      <legal_client_machine>b8:8d:12:43:cf:ee</legal_client_machine>
+      <legal_client_machine>00:e0:4c:34:81:d7</legal_client_machine>
+      <legal_client_machine>54:26:96:41:3F:2F</legal_client_machine>
+      <legal_client_machine>1C:AB:A7:C4:51:A5</legal_client_machine>
+      <legal_client_machine>F4:1B:A1:2A:FC:26</legal_client_machine>
+      <legal_client_machine>A4:D1:D2:08:38:30</legal_client_machine>
+      <legal_client_machine>20:7D:74:90:F8:6A</legal_client_machine>
+      <legal_client_machine>10:1C:0C:83:26:54</legal_client_machine>
+      <legal_client_machine>20:7D:74:05:FA:CC</legal_client_machine>
+      <legal_client_machine>20:7D:74:7E:AE:94</legal_client_machine>
+      <legal_client_machine>88:1F:A1:E0:7F:E2</legal_client_machine>
+      <legal_client_machine>18:9E:FC:18:9E:ED</legal_client_machine>
+      <legal_client_machine>http://fanxian.cdn.download.553.com/v63/FanXian_553Pre_v63_2014-9-24-14.ipa</legal_client_machine>
     </legal_client_machine_list>
     <language>
     </language>
-    <ForceUpdate>False</ForceUpdate>
     <VersionBase>
       <FromVersion>0</FromVersion>
       <ToVersion>1</ToVersion>
-      <PatchFile>http://cdn.yzry-download.springgamenet.com/android/v1.3.7/v2.1.6_tw_android_20180802193653_1</PatchFile>
-      <PatchFileMD5>9edda806e19a764594761e8ec2d24e9b</PatchFileMD5>
-      <FileSize>717142379</FileSize>
-      <mapFile>http://cdn.yzry-download.springgamenet.com/android/v1.3.7/v2.1.6_tw_android_20180802193653_1.map</mapFile>
-      <mapFileMD5>06a0a45b3750b33b142a603e7b10a355</mapFileMD5>
-      <mapFileSize>538404</mapFileSize>
+      <PatchFile>http://192.168.13.9:8080/jfreechart-sample/images/1151448_v1.1.2_iPhone_1</PatchFile>
+      <PatchFileMD5>51672941447adc4b8ce8292acffab0aa</PatchFileMD5>
+      <FileSize>136029760</FileSize>
+      <mapFile>http://192.168.13.9:8080/jfreechart-sample/images/1151448_v1.1.2_iPhone_1.map</mapFile>
+      <mapFileMD5>7c4c1265d914eff1acc72dd6998334e2</mapFileMD5>
+      <mapFileSize>208200</mapFileSize>
+    </VersionBase>
+    <VersionBase>
+      <FromVersion>1</FromVersion>
+      <ToVersion>2</ToVersion>
+      <PatchFile>http://192.168.13.9:8080/jfreechart-sample/images/1151448_v1.1.2_iPhone_2</PatchFile>
+      <PatchFileMD5>60801fbf6c9eac72cec4df0074a261fc</PatchFileMD5>
+      <FileSize>101612055</FileSize>
+      <mapFile>http://192.168.13.9:8080/jfreechart-sample/images/1151448_v1.1.2_iPhone_2.map</mapFile>
+      <mapFileMD5>f7a3f501b2982bf79538be6ed0e29d9d</mapFileMD5>
+      <mapFileSize>45968</mapFileSize>
+    </VersionBase>
+    <VersionBase>
+      <FromVersion>2</FromVersion>
+      <ToVersion>3</ToVersion>
+      <PatchFile>http://192.168.13.9:8080/jfreechart-sample/images/1151448_v1.1.2_iPhone_3</PatchFile>
+      <PatchFileMD5>7e5a0d8ac738f7a49b3f4152364c846a</PatchFileMD5>
+      <FileSize>45494976</FileSize>
+      <mapFile>http://192.168.13.9:8080/jfreechart-sample/images/1151448_v1.1.2_iPhone_3.map</mapFile>
+      <mapFileMD5>0854e0e64189b96faeafaf7c3c48ca3a</mapFileMD5>
+      <mapFileSize>14265</mapFileSize>
     </VersionBase>
     <VersionPatch>
-      <FromVersion>1.3.6</FromVersion>
-      <ToVersion>2.1.6.1</ToVersion>
-      <PatchFile>http://lsmdownloadcache.iwgame.com/ares/v1.1.1/12241932_v1.1.1_1_1.map</PatchFile>
+      <FromVersion>1.1.0</FromVersion>
+      <ToVersion>1.1.1</ToVersion>
+      <PatchFile>http://fanxian.cdn.download.553.com/ares/v1.1.1/12241932_v1.1.1_1_1.map</PatchFile>
       <PatchFileMD5>c92b75aa0f2d4bbf43a58e5639081da4</PatchFileMD5>
       <FileSize>28248051</FileSize>
     </VersionPatch>
   </test_tag>
   <!--公告-->
   <game_notice_title>【凡仙公告】</game_notice_title>
-  <game_notice_message>
-  </game_notice_message>
-  <ForceUpdate>False</ForceUpdate>
+  <game_notice_message>[玩法更新]
+1.子嗣系统v1.0开放啦！是招商还是建设银行，想想都有点小激动！
+2.好马配好鞍,新增坐骑装备让您的“马儿”更有价值！
+3.天命诛邪新增“浮屠”“承光”两孔，至尊黄，彰显与众不同！
+
+
+[游戏优化]
+
+1.调整翻牌奖励和升级奖励，“琉璃钢”现在加入翻牌豪华套餐！这只是调整的开始！
+2.略微削弱炼狱副本，增大炼狱产出，GM凭什么炼狱这么难收获还这么小！
+3.优化装备强化20套及21套光环，让审美疲劳的您眼前一亮...
+4.调整跨服战场奖励，提高战败后获得奖励数量，战败也没什么，再来一次就行！
+5.竞技场进入非正常区域会将玩家拉至场地中央并定身30s。
+6.修正加速外挂判定！用就掉线再用就冻结再再用就永冻！
+7.炼狱、天关和诛仙塔加入新物品掉落，拉上小伙伴一起去会有惊喜哟
+8.法宝不再允许镶嵌同类同名卡片
+
+[神武调整]
+&lt;靖羽&gt;
+技能召唤的箭塔和神武召唤的箭塔伤害提高15%，神武触发几率提高5%，上限个数+1，持续时间缩短15秒
+&lt;云裳&gt;
+神武触发持续伤害提高25%，直接伤害几率提高5%
+&lt;剑宗&gt;
+神武触发伤害提高25%，触发几率提高5%
+
+[BUG修复]
+
+1.修正靖羽大神武触发特效时会一次性招3个箭塔且没有上限的bug
+2.修正云裳大神武触发没有特效bug，花了钱怎能没特效
+3.修正跨服竞技场和跨服战场各种闪退、卡死问题
+4.修正人形宠物一直呈死亡状态bug。
+5.修正IOS8键盘输入bug
+6.修正IOS8设置个人资料时调用照相机不正确bug
+</game_notice_message>
   <VersionBase>
     <FromVersion>0</FromVersion>
     <ToVersion>1</ToVersion>
-    <PatchFile>http://cdn.yzry-download.springgamenet.com/android/v1.3.7/V1.3.7_1807311509_TW_1</PatchFile>
-    <PatchFileMD5>11543ca9fa92d2a3a924d8b8dabc4df5</PatchFileMD5>
-    <FileSize>702302978</FileSize>
-    <mapFile>http://cdn.yzry-download.springgamenet.com/android/v1.3.7/V1.3.7_1807311509_TW_1.map</mapFile>
-    <mapFileMD5>14cf6deeb627b504aa7551d951873581</mapFileMD5>
-    <mapFileSize>538404</mapFileSize>
+    <PatchFile>http://192.168.13.9:8080/jfreechart-sample/images/1151448_v1.1.2_iPhone_1</PatchFile>
+    <PatchFileMD5>51672941447adc4b8ce8292acffab0aa</PatchFileMD5>
+    <FileSize>136029760</FileSize>
+    <mapFile>http://192.168.13.9:8080/jfreechart-sample/images/1151448_v1.1.2_iPhone_1.map</mapFile>
+    <mapFileMD5>7c4c1265d914eff1acc72dd6998334e2</mapFileMD5>
+    <mapFileSize>208200</mapFileSize>
+  </VersionBase>
+  <VersionBase>
+    <FromVersion>1</FromVersion>
+    <ToVersion>2</ToVersion>
+    <PatchFile>http://192.168.13.9:8080/jfreechart-sample/images/1151448_v1.1.2_iPhone_2</PatchFile>
+    <PatchFileMD5>60801fbf6c9eac72cec4df0074a261fc</PatchFileMD5>
+    <FileSize>101612055</FileSize>
+    <mapFile>http://192.168.13.9:8080/jfreechart-sample/images/1151448_v1.1.2_iPhone_2.map</mapFile>
+    <mapFileMD5>f7a3f501b2982bf79538be6ed0e29d9d</mapFileMD5>
+    <mapFileSize>45968</mapFileSize>
+  </VersionBase>
+  <VersionBase>
+    <FromVersion>2</FromVersion>
+    <ToVersion>3</ToVersion>
+    <PatchFile>http://192.168.13.9:8080/jfreechart-sample/images/1151448_v1.1.2_iPhone_3</PatchFile>
+    <PatchFileMD5>7e5a0d8ac738f7a49b3f4152364c846a</PatchFileMD5>
+    <FileSize>45494976</FileSize>
+    <mapFile>http://192.168.13.9:8080/jfreechart-sample/images/1151448_v1.1.2_iPhone_3.map</mapFile>
+    <mapFileMD5>0854e0e64189b96faeafaf7c3c48ca3a</mapFileMD5>
+    <mapFileSize>14265</mapFileSize>
   </VersionBase>
   <VersionPatch>
-    <FromVersion>1.3.6</FromVersion>
-    <ToVersion>2.1.6</ToVersion>
-    <PatchFile>http://lsmdownloadcache.iwgame.com/ares/v1.1.1/12241932_v1.1.1_1_1.map</PatchFile>
+    <FromVersion>1.1.0</FromVersion>
+    <ToVersion>1.1.1</ToVersion>
+    <PatchFile>http://fanxian.cdn.download.553.com/ares/v1.1.1/12241932_v1.1.1_1_1.map</PatchFile>
     <PatchFileMD5>c92b75aa0f2d4bbf43a58e5639081da4</PatchFileMD5>
     <FileSize>28248051</FileSize>
   </VersionPatch>
+  <notice>
+    <message>1.资料片6.3更新公告</message>
+  </notice>
 </ResourceVersion>

@@ -38,6 +38,8 @@ namespace ResourceConfig
         public static Form1 g_Context;
         ConfigXmlModel g_configXmlModel;
 
+        List<string> m_resourceList;
+
         VersionModel m_VersionModeForCopy;
 
         public Form1()
@@ -71,7 +73,6 @@ namespace ResourceConfig
             {
                 MessageBox.Show("解析配置文件失败");
             }
-
             hideControls();
         }
 
@@ -111,10 +112,10 @@ namespace ResourceConfig
             groupBoxList.Add(groupBox14);
             groupBoxList.Add(groupBox2);
             groupBoxList.Add(groupBox3);
-            groupBoxList.Add(groupBox4);
             groupBoxList.Add(groupBox5);
             groupBoxList.Add(groupBox6);
             groupBoxList.Add(groupBox7);
+            groupBoxList.Add(groupBox8);
             groupBoxList.Add(groupBox9);
             foreach (GroupBox box in groupBoxList)
             {
@@ -487,15 +488,6 @@ namespace ResourceConfig
             DLLSize.Text = "";
         }
 
-        public void ClearNormalPatchInfos()
-        {
-            NormalPatchFromText.Text = "";
-            NormalPatchToText.Text = "";
-            NormalPatchUrlText.Text = "";
-            NormalPatchSizeText.Text = "";
-            NormalPatchMd5Text.Text = "";
-        }
-
 
         public void ClearTestBaseInfos()
         {
@@ -521,6 +513,11 @@ namespace ResourceConfig
             TestPatchUrlText.Text = "";
             TestPatchSizeText.Text = "";
             TestPatchMD5Text.Text = "";
+        }
+
+        public void ClearComBoBoxInfos()
+        {
+            ValidVersionComboBox.Items.Clear();
         }
 
         bool isResourceListSelectedChanged = false;
@@ -601,13 +598,23 @@ namespace ResourceConfig
             NormalFlow flow = resourceMode.m_NormalFlow;
             VersionModel versionMode = flow.patchModel[listBox.SelectedIndex];
 
-            NormalPatchFromText.Text = versionMode.fromVersion;
-            NormalPatchToText.Text = versionMode.toVersion;
-            NormalPatchUrlText.Text = versionMode.resourceUrl;
-            NormalPatchSizeText.Text = versionMode.fileSize;
-            NormalPatchMd5Text.Text = versionMode.md5;
-
             isSelectChangeCourceTextChange = false;
+        }
+
+        private void NormalLoginText_TextChanged(object sender, EventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+
+            NormalFlow flow = resourceMode.m_NormalFlow;
+            flow.loginIP = tb.Text;
+        }
+
+        private void NormalPortText_TextChanged(object sender, EventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+
+            NormalFlow flow = resourceMode.m_NormalFlow;
+            flow.loginPort = tb.Text;
         }
 
         private void NormalAppVersionText_TextChanged(object sender, EventArgs e)
@@ -658,26 +665,6 @@ namespace ResourceConfig
             NormalBaseList.Items[NormalBaseList.SelectedIndex] = NormalBaseFromText.Text + " -> " + NormalBaseToText.Text;
         }
 
-        private void NormalPatchFromText_TextChanged(object sender, EventArgs e)
-        {
-            if (isSelectChangeCourceTextChange || NormalPatchList.SelectedIndex < 0)
-            {
-                return;
-            }
-
-            TextBox tb = sender as TextBox;
-
-            NormalFlow flow = resourceMode.m_NormalFlow;
-            VersionModel versionMode = flow.patchModel[NormalPatchList.SelectedIndex];
-
-            versionMode.fromVersion = NormalPatchFromText.Text;
-            versionMode.toVersion = NormalPatchToText.Text;
-            versionMode.resourceUrl = NormalPatchUrlText.Text;
-            versionMode.fileSize = NormalPatchSizeText.Text;
-            versionMode.md5 = NormalPatchMd5Text.Text;
-            NormalPatchList.Items[NormalPatchList.SelectedIndex] = NormalPatchFromText.Text + " -> " + NormalPatchToText.Text;
-        }
-
 #region 拖动文件到listbox里面，添加新的version项
 
 
@@ -715,30 +702,6 @@ namespace ResourceConfig
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop)) e.Effect = DragDropEffects.Link;
             else e.Effect = DragDropEffects.None;
-        }
-
-        private void NormalPatchListDragDrop(object sender, DragEventArgs e)
-        {
-            NormalFlow flow = resourceMode.m_NormalFlow;
-
-            string[] filePath = (string[])e.Data.GetData(DataFormats.FileDrop);
-            foreach (string file in filePath)
-            {
-                FileInfo fileInfo = new FileInfo(file);
-                string fileSize = "" + fileInfo.Length;
-                string md5 = ResourceConfig.Util.FileUtil.GetMD5HashFromFile(file);
-
-                VersionModel model = new VersionModel();
-                model.fileSize = fileSize;
-                model.fromVersion = "null";
-                model.toVersion = "null";
-                model.resourceUrl = file;
-                model.md5 = md5;
-
-                flow.patchModel.Add(model);
-
-                NormalPatchList.Items.Add(model.fromVersion + " -> " + model.toVersion);
-            }
         }
 #endregion
 
@@ -868,6 +831,15 @@ namespace ResourceConfig
             string boxValue = tb.Text;
 
             TestFlow flow = resourceMode.m_TestFlow;
+
+            if (boxName == "TestLoginIpText")
+            {
+                flow.loginIP = boxValue;
+            }
+            if (boxName == "TestLoginPortText")
+            {
+                flow.loginPort = boxValue;
+            }
             if (boxName == "TestAppUrlText")
             {
                 flow.url = boxValue;
@@ -887,6 +859,18 @@ namespace ResourceConfig
             if (boxName == "TestSmallVersionText")
             {
                 flow.smallVersion = boxValue;
+            }
+            if (boxName == "TestServerIpText")
+            {
+                flow.serverIP = boxValue;
+            }
+            if (boxName == "TestServerPortText")
+            {
+                flow.serverPort = boxValue;
+            }
+            if (boxName == "language_test")
+            {
+                flow.language_test = boxValue;
             }
         }
 
@@ -1104,6 +1088,9 @@ namespace ResourceConfig
             }
             TextBox box = sender as TextBox;
             string value = box.Text;
+
+            resourceMode.m_NoticeModel.m_NoticeTitle = NoticeTitle.Text;
+            resourceMode.m_NoticeModel.m_NoticeContent = NoticeContent.Text;
         }
 
         private void WhiteAccountTextChanged(object sender, EventArgs e)
@@ -1508,7 +1495,6 @@ namespace ResourceConfig
             NormalAppVersionText.Text = TestBigVersionText.Text;
             NormalAppUrlText.Text = TestAppUrlText.Text;
             NormalAppSizeText.Text = TestAppSizeText.Text;
-            NormalResVersionBox.Text = TestResVersion.Text;
 
             if (resourceMode.m_TestFlow.baseModel.Count > 0)
             {
@@ -1622,6 +1608,14 @@ namespace ResourceConfig
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop)) e.Effect = DragDropEffects.Link;
             else e.Effect = DragDropEffects.None;
+        }
+
+        private void NormalLanuageText_TextChanged(object sender, EventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+
+            NormalFlow flow = resourceMode.m_NormalFlow;
+            flow.language = tb.Text;
         }
 
         private void connectModel_CheckedChanged(object sender, EventArgs e)
@@ -1880,19 +1874,110 @@ namespace ResourceConfig
                 }
             }
         }
-        
-        private void resVersionBox_TextChanged(object sender, EventArgs e)
+
+        /// <summary>
+        /// 打开操作步骤界面
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void operationBtn_Click(object sender, EventArgs e)
         {
-            TextBox tb = sender as TextBox;
-            NormalFlow flow = resourceMode.m_NormalFlow;
-            flow.resVersion = tb.Text;
+            OperationForm operForm = new OperationForm();
+            operForm.ShowDialog();
         }
 
-        private void TestResVersion_TextChanged(object sender, EventArgs e)
+        /// <summary>
+        /// 拷贝资源下载的配置到其他渠道
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CopyConfBtn_Click(object sender, EventArgs e)
         {
-            TextBox tb = sender as TextBox;
-            TestFlow flow = resourceMode.m_TestFlow;
-            flow.resVersion = tb.Text;
+            int index = TestVersionBaseList.SelectedIndex;
+            if (index < 0)
+            {
+                return;
+            }
+            VersionModel model = resourceMode.m_TestFlow.baseModel[index];
+            m_VersionModeForCopy = model.clone();
+            model = m_VersionModeForCopy.clone();
+
+            bool contains = false;
+            foreach (VersionModel patchModel in resourceMode.m_TestFlow.baseModel)
+            {
+                if ((model.fromVersion == patchModel.fromVersion) && model.toVersion == patchModel.toVersion)
+                {
+                    patchModel.resourceUrl = model.resourceUrl;
+                    patchModel.md5 = model.md5;
+                    patchModel.fileSize = model.fileSize;
+                    patchModel.map_md5 = model.map_md5;
+                    patchModel.map_size = model.map_size;
+                    patchModel.map_url = model.map_url;
+                    contains = true;
+
+                    break;
+                }
+            }
+
+            if (!contains)
+            {
+                resourceMode.m_TestFlow.baseModel.Add(model);
+            }
+
+            resourceMode.m_TestFlow.setText();
+
+            PasteAllModel(true, model);
+        }
+
+        /// <summary>
+        /// 拷贝资源补丁版本号配置到其他渠道
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CopyResVersionBtn_Click(object sender, EventArgs e)
+        {
+            int index = TestVersionPatchList.SelectedIndex;
+            if (index < 0)
+            {
+                return;
+            }
+            VersionModel model = resourceMode.m_TestFlow.patchModel[index];
+            m_VersionModeForCopy = model.clone();
+            model = m_VersionModeForCopy.clone();
+            bool contains = false;
+            foreach (VersionModel patchModel in resourceMode.m_TestFlow.patchModel)
+            {
+                if ((model.fromVersion == patchModel.fromVersion) && model.toVersion == patchModel.toVersion)
+                {
+                    patchModel.resourceUrl = model.resourceUrl;
+                    patchModel.md5 = model.md5;
+                    patchModel.fileSize = model.fileSize;
+                    patchModel.map_md5 = model.map_md5;
+                    patchModel.map_size = model.map_size;
+                    patchModel.map_url = model.map_url;
+                    contains = true;
+                    break;
+                }
+            }
+            if (!contains)
+            {
+                resourceMode.m_TestFlow.patchModel.Add(model);
+            }
+            resourceMode.m_TestFlow.setText();
+            PasteAllModel(false, model);
+        }
+
+        /// <summary>
+        /// 选择版本
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox selectedBox = (ComboBox)sender;
+            // 选中的版本号
+            string version = selectedBox.SelectedItem.ToString().Trim();
+            //1. 这里选中了版本就刷新下方的资源配置数据
         }
     }
 }

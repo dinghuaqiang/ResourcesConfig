@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
             this.connectModel = new System.Windows.Forms.CheckBox();
             this.textBox_timeout = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
@@ -41,9 +44,11 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabNormal = new System.Windows.Forms.TabPage();
+            this.label24 = new System.Windows.Forms.Label();
+            this.ValidVersionComboBox = new System.Windows.Forms.ComboBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.NormalResVersionBox = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.ForceUpdateAppCheckBox = new System.Windows.Forms.CheckBox();
             this.NormalAppSizeText = new System.Windows.Forms.TextBox();
             this.label37 = new System.Windows.Forms.Label();
@@ -51,18 +56,10 @@
             this.label36 = new System.Windows.Forms.Label();
             this.NormalAppVersionText = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.NormalPatchSizeText = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.NormalPatchMd5Text = new System.Windows.Forms.TextBox();
-            this.label24 = new System.Windows.Forms.Label();
-            this.NormalPatchUrlText = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.NormalPatchToText = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.NormalPatchFromText = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.NormalPatchList = new System.Windows.Forms.ListBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.languageLable = new System.Windows.Forms.Label();
+            this.language = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.NormalBaseMapSize = new System.Windows.Forms.TextBox();
             this.label38 = new System.Windows.Forms.Label();
@@ -82,6 +79,12 @@
             this.label32 = new System.Windows.Forms.Label();
             this.NormalBaseList = new System.Windows.Forms.ListBox();
             this.tabTest = new System.Windows.Forms.TabPage();
+            this.label64 = new System.Windows.Forms.Label();
+            this.label63 = new System.Windows.Forms.Label();
+            this.CopyResVersionBtn = new System.Windows.Forms.Button();
+            this.CopyConfBtn = new System.Windows.Forms.Button();
+            this.label62 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
             this.copy_notice = new System.Windows.Forms.Label();
             this.copy_base_set = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -123,10 +126,13 @@
             this.Copy = new System.Windows.Forms.ToolStripMenuItem();
             this.Paste = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.TestResVersion = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.label60 = new System.Windows.Forms.Label();
             this.ForceUpdateAppTestCheckBox = new System.Windows.Forms.CheckBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.language_test = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -134,8 +140,16 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.TestCurrentVersionText = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.TestServerPortText = new System.Windows.Forms.TextBox();
+            this.TestServerIpText = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.TestSmallVersionText = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TestLoginPortText = new System.Windows.Forms.TextBox();
+            this.TestLoginIpText = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.TestAppUrlText = new System.Windows.Forms.TextBox();
             this.TestBigVersionText = new System.Windows.Forms.TextBox();
@@ -170,12 +184,22 @@
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.IMEIText = new System.Windows.Forms.RichTextBox();
             this.ErrorMsg = new System.Windows.Forms.Label();
+            this.operationBtn = new System.Windows.Forms.Button();
+            this.NoticeContent = new System.Windows.Forms.TextBox();
+            this.NoticeTitle = new System.Windows.Forms.TextBox();
+            this.Notice1 = new System.Windows.Forms.TextBox();
+            this.Notice2 = new System.Windows.Forms.TextBox();
+            this.Notice3 = new System.Windows.Forms.TextBox();
+            this.Notice4 = new System.Windows.Forms.TextBox();
+            this.Notice5 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button6 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabNormal.SuspendLayout();
             this.groupBox9.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.tabTest.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -194,6 +218,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label59);
+            this.groupBox1.Controls.Add(this.label57);
+            this.groupBox1.Controls.Add(this.label58);
             this.groupBox1.Controls.Add(this.connectModel);
             this.groupBox1.Controls.Add(this.textBox_timeout);
             this.groupBox1.Controls.Add(this.label48);
@@ -201,18 +228,48 @@
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.ResourceList);
-            this.groupBox1.Location = new System.Drawing.Point(12, 29);
+            this.groupBox1.Location = new System.Drawing.Point(12, 40);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(279, 628);
+            this.groupBox1.Size = new System.Drawing.Size(279, 693);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.ForeColor = System.Drawing.Color.Red;
+            this.label59.Location = new System.Drawing.Point(6, 187);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(245, 12);
+            this.label59.TabIndex = 10;
+            this.label59.Text = "3 选中已配置的渠道确认没问题只后点击提交";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.ForeColor = System.Drawing.Color.Red;
+            this.label57.Location = new System.Drawing.Point(6, 166);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(221, 12);
+            this.label57.TabIndex = 9;
+            this.label57.Text = "2 选中带\'√\'的渠道进行资源和版本配置";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.ForeColor = System.Drawing.Color.Red;
+            this.label58.Location = new System.Drawing.Point(6, 146);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(257, 12);
+            this.label58.TabIndex = 8;
+            this.label58.Text = "1 双击或空格键勾选下方渠道点击上方更新按钮";
             // 
             // connectModel
             // 
             this.connectModel.AutoSize = true;
             this.connectModel.Checked = true;
             this.connectModel.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.connectModel.Location = new System.Drawing.Point(23, 111);
+            this.connectModel.Location = new System.Drawing.Point(23, 98);
             this.connectModel.Name = "connectModel";
             this.connectModel.Size = new System.Drawing.Size(96, 16);
             this.connectModel.TabIndex = 6;
@@ -222,7 +279,7 @@
             // 
             // textBox_timeout
             // 
-            this.textBox_timeout.Location = new System.Drawing.Point(94, 127);
+            this.textBox_timeout.Location = new System.Drawing.Point(94, 114);
             this.textBox_timeout.Name = "textBox_timeout";
             this.textBox_timeout.Size = new System.Drawing.Size(79, 21);
             this.textBox_timeout.TabIndex = 5;
@@ -230,7 +287,7 @@
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(21, 130);
+            this.label48.Location = new System.Drawing.Point(21, 117);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(77, 12);
             this.label48.TabIndex = 4;
@@ -238,7 +295,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(181, 127);
+            this.button3.Location = new System.Drawing.Point(181, 114);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 3;
@@ -248,28 +305,28 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(154, 35);
+            this.button2.Location = new System.Drawing.Point(154, 11);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(102, 72);
             this.button2.TabIndex = 2;
-            this.button2.Text = "上传";
+            this.button2.Text = "上传配置";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(21, 35);
+            this.button1.Location = new System.Drawing.Point(21, 11);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(102, 72);
             this.button1.TabIndex = 1;
-            this.button1.Text = "更新";
+            this.button1.Text = "更新配置";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ResourceList
             // 
             this.ResourceList.FormattingEnabled = true;
-            this.ResourceList.Location = new System.Drawing.Point(6, 155);
+            this.ResourceList.Location = new System.Drawing.Point(6, 216);
             this.ResourceList.Name = "ResourceList";
             this.ResourceList.Size = new System.Drawing.Size(267, 468);
             this.ResourceList.TabIndex = 0;
@@ -278,9 +335,9 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.tabControl1);
-            this.groupBox2.Location = new System.Drawing.Point(298, 29);
+            this.groupBox2.Location = new System.Drawing.Point(304, 40);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(954, 628);
+            this.groupBox2.Size = new System.Drawing.Size(1085, 693);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
@@ -290,29 +347,50 @@
             this.tabControl1.Controls.Add(this.tabTest);
             this.tabControl1.Controls.Add(this.tabDll);
             this.tabControl1.Controls.Add(this.tabWhiteList);
-            this.tabControl1.Location = new System.Drawing.Point(6, 35);
+            this.tabControl1.Location = new System.Drawing.Point(6, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(948, 593);
+            this.tabControl1.Size = new System.Drawing.Size(1073, 683);
             this.tabControl1.TabIndex = 25;
             // 
             // tabNormal
             // 
             this.tabNormal.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabNormal.Controls.Add(this.button6);
+            this.tabNormal.Controls.Add(this.textBox2);
+            this.tabNormal.Controls.Add(this.label24);
+            this.tabNormal.Controls.Add(this.ValidVersionComboBox);
             this.tabNormal.Controls.Add(this.groupBox9);
-            this.tabNormal.Controls.Add(this.groupBox4);
+            this.tabNormal.Controls.Add(this.groupBox8);
             this.tabNormal.Controls.Add(this.groupBox7);
             this.tabNormal.Location = new System.Drawing.Point(4, 22);
             this.tabNormal.Name = "tabNormal";
             this.tabNormal.Padding = new System.Windows.Forms.Padding(3);
-            this.tabNormal.Size = new System.Drawing.Size(940, 567);
+            this.tabNormal.Size = new System.Drawing.Size(1065, 657);
             this.tabNormal.TabIndex = 0;
             this.tabNormal.Text = "正式流程";
             // 
+            // label24
+            // 
+            this.label24.Location = new System.Drawing.Point(19, 102);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(63, 17);
+            this.label24.TabIndex = 0;
+            this.label24.Text = "生效版本";
+            // 
+            // ValidVersionComboBox
+            // 
+            this.ValidVersionComboBox.FormattingEnabled = true;
+            this.ValidVersionComboBox.Location = new System.Drawing.Point(82, 99);
+            this.ValidVersionComboBox.Name = "ValidVersionComboBox";
+            this.ValidVersionComboBox.Size = new System.Drawing.Size(137, 20);
+            this.ValidVersionComboBox.TabIndex = 58;
+            this.ValidVersionComboBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.NormalResVersionBox);
-            this.groupBox9.Controls.Add(this.label33);
+            this.groupBox9.Controls.Add(this.textBox1);
+            this.groupBox9.Controls.Add(this.label23);
             this.groupBox9.Controls.Add(this.ForceUpdateAppCheckBox);
             this.groupBox9.Controls.Add(this.NormalAppSizeText);
             this.groupBox9.Controls.Add(this.label37);
@@ -320,36 +398,35 @@
             this.groupBox9.Controls.Add(this.label36);
             this.groupBox9.Controls.Add(this.NormalAppVersionText);
             this.groupBox9.Controls.Add(this.label35);
-            this.groupBox9.Location = new System.Drawing.Point(19, 278);
+            this.groupBox9.Location = new System.Drawing.Point(19, 404);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(358, 238);
+            this.groupBox9.Size = new System.Drawing.Size(523, 239);
             this.groupBox9.TabIndex = 57;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "app版本和升级地址";
             // 
-            // NormalResVersionBox
+            // textBox1
             // 
-            this.NormalResVersionBox.Location = new System.Drawing.Point(80, 67);
-            this.NormalResVersionBox.Name = "NormalResVersionBox";
-            this.NormalResVersionBox.Size = new System.Drawing.Size(118, 21);
-            this.NormalResVersionBox.TabIndex = 62;
-            this.NormalResVersionBox.TextChanged += new System.EventHandler(this.resVersionBox_TextChanged);
+            this.textBox1.Location = new System.Drawing.Point(80, 58);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(120, 21);
+            this.textBox1.TabIndex = 62;
             // 
-            // label33
+            // label23
             // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(10, 70);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(53, 12);
-            this.label33.TabIndex = 63;
-            this.label33.Text = "资源版本";
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(10, 62);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(53, 12);
+            this.label23.TabIndex = 63;
+            this.label23.Text = "补丁版本";
             // 
             // ForceUpdateAppCheckBox
             // 
             this.ForceUpdateAppCheckBox.AutoSize = true;
             this.ForceUpdateAppCheckBox.Checked = true;
             this.ForceUpdateAppCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ForceUpdateAppCheckBox.Location = new System.Drawing.Point(231, 32);
+            this.ForceUpdateAppCheckBox.Location = new System.Drawing.Point(231, 27);
             this.ForceUpdateAppCheckBox.Name = "ForceUpdateAppCheckBox";
             this.ForceUpdateAppCheckBox.Size = new System.Drawing.Size(72, 16);
             this.ForceUpdateAppCheckBox.TabIndex = 61;
@@ -359,7 +436,7 @@
             // 
             // NormalAppSizeText
             // 
-            this.NormalAppSizeText.Location = new System.Drawing.Point(80, 211);
+            this.NormalAppSizeText.Location = new System.Drawing.Point(80, 190);
             this.NormalAppSizeText.Name = "NormalAppSizeText";
             this.NormalAppSizeText.Size = new System.Drawing.Size(120, 21);
             this.NormalAppSizeText.TabIndex = 59;
@@ -369,7 +446,7 @@
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(10, 215);
+            this.label37.Location = new System.Drawing.Point(10, 194);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(29, 12);
             this.label37.TabIndex = 60;
@@ -377,10 +454,10 @@
             // 
             // NormalAppUrlText
             // 
-            this.NormalAppUrlText.Location = new System.Drawing.Point(12, 121);
+            this.NormalAppUrlText.Location = new System.Drawing.Point(12, 113);
             this.NormalAppUrlText.Multiline = true;
             this.NormalAppUrlText.Name = "NormalAppUrlText";
-            this.NormalAppUrlText.Size = new System.Drawing.Size(340, 81);
+            this.NormalAppUrlText.Size = new System.Drawing.Size(485, 64);
             this.NormalAppUrlText.TabIndex = 57;
             this.NormalAppUrlText.TextChanged += new System.EventHandler(this.NormalAppUrlText_TextChanged);
             this.NormalAppUrlText.Leave += new System.EventHandler(this.onFocusChanged);
@@ -388,15 +465,15 @@
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(10, 103);
+            this.label36.Location = new System.Drawing.Point(10, 91);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(71, 12);
+            this.label36.Size = new System.Drawing.Size(347, 12);
             this.label36.TabIndex = 58;
-            this.label36.Text = "app下载地址";
+            this.label36.Text = "app下载地址(安卓可以把apk拖进框改地址，ios配appstore地址)";
             // 
             // NormalAppVersionText
             // 
-            this.NormalAppVersionText.Location = new System.Drawing.Point(80, 31);
+            this.NormalAppVersionText.Location = new System.Drawing.Point(80, 26);
             this.NormalAppVersionText.Name = "NormalAppVersionText";
             this.NormalAppVersionText.Size = new System.Drawing.Size(120, 21);
             this.NormalAppVersionText.TabIndex = 55;
@@ -406,137 +483,51 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(10, 35);
+            this.label35.Location = new System.Drawing.Point(10, 30);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(47, 12);
             this.label35.TabIndex = 56;
-            this.label35.Text = "app版本";
+            this.label35.Text = "App版本";
             // 
-            // groupBox4
+            // groupBox8
             // 
-            this.groupBox4.Controls.Add(this.NormalPatchSizeText);
-            this.groupBox4.Controls.Add(this.label23);
-            this.groupBox4.Controls.Add(this.NormalPatchMd5Text);
-            this.groupBox4.Controls.Add(this.label24);
-            this.groupBox4.Controls.Add(this.NormalPatchUrlText);
-            this.groupBox4.Controls.Add(this.label25);
-            this.groupBox4.Controls.Add(this.NormalPatchToText);
-            this.groupBox4.Controls.Add(this.label26);
-            this.groupBox4.Controls.Add(this.NormalPatchFromText);
-            this.groupBox4.Controls.Add(this.label27);
-            this.groupBox4.Controls.Add(this.NormalPatchList);
-            this.groupBox4.Location = new System.Drawing.Point(406, 278);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(527, 283);
-            this.groupBox4.TabIndex = 55;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "VersionPatch";
+            this.groupBox8.Controls.Add(this.label45);
+            this.groupBox8.Controls.Add(this.languageLable);
+            this.groupBox8.Controls.Add(this.language);
+            this.groupBox8.Enabled = false;
+            this.groupBox8.Location = new System.Drawing.Point(19, 17);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(523, 72);
+            this.groupBox8.TabIndex = 56;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "语言设置";
             // 
-            // NormalPatchSizeText
+            // label45
             // 
-            this.NormalPatchSizeText.Location = new System.Drawing.Point(183, 217);
-            this.NormalPatchSizeText.Name = "NormalPatchSizeText";
-            this.NormalPatchSizeText.Size = new System.Drawing.Size(118, 21);
-            this.NormalPatchSizeText.TabIndex = 51;
-            this.NormalPatchSizeText.TextChanged += new System.EventHandler(this.NormalPatchFromText_TextChanged);
-            this.NormalPatchSizeText.Leave += new System.EventHandler(this.onFocusChanged);
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(6, 20);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(281, 12);
+            this.label45.TabIndex = 57;
+            this.label45.Text = " 0 CHS; 1 CHT; 2 KOR; 3 YHZ; 4 VN; 5 TG; 6 EN;";
             // 
-            // label23
+            // languageLable
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(147, 220);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(29, 12);
-            this.label23.TabIndex = 52;
-            this.label23.Text = "size";
+            this.languageLable.AutoSize = true;
+            this.languageLable.Location = new System.Drawing.Point(10, 45);
+            this.languageLable.Name = "languageLable";
+            this.languageLable.Size = new System.Drawing.Size(29, 12);
+            this.languageLable.TabIndex = 56;
+            this.languageLable.Text = "语言";
             // 
-            // NormalPatchMd5Text
+            // language
             // 
-            this.NormalPatchMd5Text.Location = new System.Drawing.Point(183, 187);
-            this.NormalPatchMd5Text.Name = "NormalPatchMd5Text";
-            this.NormalPatchMd5Text.Size = new System.Drawing.Size(314, 21);
-            this.NormalPatchMd5Text.TabIndex = 49;
-            this.NormalPatchMd5Text.TextChanged += new System.EventHandler(this.NormalPatchFromText_TextChanged);
-            this.NormalPatchMd5Text.Leave += new System.EventHandler(this.onFocusChanged);
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(147, 190);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(23, 12);
-            this.label24.TabIndex = 50;
-            this.label24.Text = "MD5";
-            // 
-            // NormalPatchUrlText
-            // 
-            this.NormalPatchUrlText.Location = new System.Drawing.Point(149, 85);
-            this.NormalPatchUrlText.Multiline = true;
-            this.NormalPatchUrlText.Name = "NormalPatchUrlText";
-            this.NormalPatchUrlText.Size = new System.Drawing.Size(348, 81);
-            this.NormalPatchUrlText.TabIndex = 47;
-            this.NormalPatchUrlText.TextChanged += new System.EventHandler(this.NormalPatchFromText_TextChanged);
-            this.NormalPatchUrlText.Leave += new System.EventHandler(this.onFocusChanged);
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(147, 59);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(77, 12);
-            this.label25.TabIndex = 48;
-            this.label25.Text = "资源下载地址";
-            // 
-            // NormalPatchToText
-            // 
-            this.NormalPatchToText.Location = new System.Drawing.Point(379, 26);
-            this.NormalPatchToText.Name = "NormalPatchToText";
-            this.NormalPatchToText.Size = new System.Drawing.Size(118, 21);
-            this.NormalPatchToText.TabIndex = 45;
-            this.NormalPatchToText.TextChanged += new System.EventHandler(this.NormalPatchFromText_TextChanged);
-            this.NormalPatchToText.Leave += new System.EventHandler(this.onFocusChanged);
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(343, 29);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(17, 12);
-            this.label26.TabIndex = 46;
-            this.label26.Text = "to";
-            // 
-            // NormalPatchFromText
-            // 
-            this.NormalPatchFromText.Location = new System.Drawing.Point(183, 26);
-            this.NormalPatchFromText.Name = "NormalPatchFromText";
-            this.NormalPatchFromText.Size = new System.Drawing.Size(118, 21);
-            this.NormalPatchFromText.TabIndex = 43;
-            this.NormalPatchFromText.TextChanged += new System.EventHandler(this.NormalPatchFromText_TextChanged);
-            this.NormalPatchFromText.Leave += new System.EventHandler(this.onFocusChanged);
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(147, 29);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(29, 12);
-            this.label27.TabIndex = 44;
-            this.label27.Text = "from";
-            // 
-            // NormalPatchList
-            // 
-            this.NormalPatchList.AllowDrop = true;
-            this.NormalPatchList.FormattingEnabled = true;
-            this.NormalPatchList.ItemHeight = 12;
-            this.NormalPatchList.Location = new System.Drawing.Point(6, 20);
-            this.NormalPatchList.Name = "NormalPatchList";
-            this.NormalPatchList.Size = new System.Drawing.Size(131, 232);
-            this.NormalPatchList.TabIndex = 0;
-            this.NormalPatchList.SelectedIndexChanged += new System.EventHandler(this.NormalPatchList_SelectedIndexChanged);
-            this.NormalPatchList.DragDrop += new System.Windows.Forms.DragEventHandler(this.NormalPatchListDragDrop);
-            this.NormalPatchList.DragEnter += new System.Windows.Forms.DragEventHandler(this.NormalPatchListDragEnter);
-            this.NormalPatchList.KeyUp += new System.Windows.Forms.KeyEventHandler(this.NormalPatchListDeleteKeyUp);
-            this.NormalPatchList.Leave += new System.EventHandler(this.onFocusChanged);
+            this.language.Location = new System.Drawing.Point(80, 42);
+            this.language.Name = "language";
+            this.language.Size = new System.Drawing.Size(24, 21);
+            this.language.TabIndex = 55;
+            this.language.TextChanged += new System.EventHandler(this.NormalLanuageText_TextChanged);
+            this.language.Leave += new System.EventHandler(this.onFocusChanged);
             // 
             // groupBox7
             // 
@@ -557,18 +548,18 @@
             this.groupBox7.Controls.Add(this.NormalBaseFromText);
             this.groupBox7.Controls.Add(this.label32);
             this.groupBox7.Controls.Add(this.NormalBaseList);
-            this.groupBox7.Location = new System.Drawing.Point(19, 7);
+            this.groupBox7.Location = new System.Drawing.Point(19, 129);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(527, 265);
+            this.groupBox7.Size = new System.Drawing.Size(523, 269);
             this.groupBox7.TabIndex = 54;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "VersionBase";
+            this.groupBox7.Text = "VersionBase资源基本信息";
             // 
             // NormalBaseMapSize
             // 
-            this.NormalBaseMapSize.Location = new System.Drawing.Point(345, 229);
+            this.NormalBaseMapSize.Location = new System.Drawing.Point(379, 230);
             this.NormalBaseMapSize.Name = "NormalBaseMapSize";
-            this.NormalBaseMapSize.Size = new System.Drawing.Size(116, 21);
+            this.NormalBaseMapSize.Size = new System.Drawing.Size(118, 21);
             this.NormalBaseMapSize.TabIndex = 57;
             this.NormalBaseMapSize.TextChanged += new System.EventHandler(this.NormalBaseFromText_TextChanged);
             this.NormalBaseMapSize.Leave += new System.EventHandler(this.onFocusChanged);
@@ -576,7 +567,7 @@
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(310, 232);
+            this.label38.Location = new System.Drawing.Point(344, 233);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(29, 12);
             this.label38.TabIndex = 58;
@@ -584,9 +575,9 @@
             // 
             // NormalBaseMapMD5
             // 
-            this.NormalBaseMapMD5.Location = new System.Drawing.Point(89, 229);
+            this.NormalBaseMapMD5.Location = new System.Drawing.Point(91, 230);
             this.NormalBaseMapMD5.Name = "NormalBaseMapMD5";
-            this.NormalBaseMapMD5.Size = new System.Drawing.Size(212, 21);
+            this.NormalBaseMapMD5.Size = new System.Drawing.Size(247, 21);
             this.NormalBaseMapMD5.TabIndex = 55;
             this.NormalBaseMapMD5.TextChanged += new System.EventHandler(this.NormalBaseFromText_TextChanged);
             this.NormalBaseMapMD5.Leave += new System.EventHandler(this.onFocusChanged);
@@ -594,7 +585,7 @@
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(6, 229);
+            this.label39.Location = new System.Drawing.Point(8, 232);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(47, 12);
             this.label39.TabIndex = 56;
@@ -603,10 +594,10 @@
             // NormalBaseMapUrl
             // 
             this.NormalBaseMapUrl.AllowDrop = true;
-            this.NormalBaseMapUrl.Location = new System.Drawing.Point(89, 184);
+            this.NormalBaseMapUrl.Location = new System.Drawing.Point(91, 185);
             this.NormalBaseMapUrl.Multiline = true;
             this.NormalBaseMapUrl.Name = "NormalBaseMapUrl";
-            this.NormalBaseMapUrl.Size = new System.Drawing.Size(372, 38);
+            this.NormalBaseMapUrl.Size = new System.Drawing.Size(406, 38);
             this.NormalBaseMapUrl.TabIndex = 53;
             this.NormalBaseMapUrl.TextChanged += new System.EventHandler(this.NormalBaseFromText_TextChanged);
             this.NormalBaseMapUrl.Leave += new System.EventHandler(this.onFocusChanged);
@@ -614,7 +605,7 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(6, 190);
+            this.label40.Location = new System.Drawing.Point(8, 191);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(71, 12);
             this.label40.TabIndex = 54;
@@ -622,7 +613,7 @@
             // 
             // NormalBaseSizeText
             // 
-            this.NormalBaseSizeText.Location = new System.Drawing.Point(183, 157);
+            this.NormalBaseSizeText.Location = new System.Drawing.Point(185, 158);
             this.NormalBaseSizeText.Name = "NormalBaseSizeText";
             this.NormalBaseSizeText.Size = new System.Drawing.Size(118, 21);
             this.NormalBaseSizeText.TabIndex = 51;
@@ -632,7 +623,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(148, 160);
+            this.label28.Location = new System.Drawing.Point(150, 161);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(29, 12);
             this.label28.TabIndex = 52;
@@ -640,7 +631,7 @@
             // 
             // NormalBaseMd5Text
             // 
-            this.NormalBaseMd5Text.Location = new System.Drawing.Point(183, 130);
+            this.NormalBaseMd5Text.Location = new System.Drawing.Point(185, 131);
             this.NormalBaseMd5Text.Name = "NormalBaseMd5Text";
             this.NormalBaseMd5Text.Size = new System.Drawing.Size(314, 21);
             this.NormalBaseMd5Text.TabIndex = 49;
@@ -650,7 +641,7 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(147, 133);
+            this.label29.Location = new System.Drawing.Point(149, 134);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(23, 12);
             this.label29.TabIndex = 50;
@@ -658,10 +649,10 @@
             // 
             // NormalBaseUrlText
             // 
-            this.NormalBaseUrlText.Location = new System.Drawing.Point(149, 85);
+            this.NormalBaseUrlText.Location = new System.Drawing.Point(151, 65);
             this.NormalBaseUrlText.Multiline = true;
             this.NormalBaseUrlText.Name = "NormalBaseUrlText";
-            this.NormalBaseUrlText.Size = new System.Drawing.Size(348, 38);
+            this.NormalBaseUrlText.Size = new System.Drawing.Size(348, 59);
             this.NormalBaseUrlText.TabIndex = 47;
             this.NormalBaseUrlText.TextChanged += new System.EventHandler(this.NormalBaseFromText_TextChanged);
             this.NormalBaseUrlText.Leave += new System.EventHandler(this.onFocusChanged);
@@ -669,7 +660,7 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(147, 59);
+            this.label30.Location = new System.Drawing.Point(149, 47);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(77, 12);
             this.label30.TabIndex = 48;
@@ -677,7 +668,7 @@
             // 
             // NormalBaseToText
             // 
-            this.NormalBaseToText.Location = new System.Drawing.Point(379, 26);
+            this.NormalBaseToText.Location = new System.Drawing.Point(381, 20);
             this.NormalBaseToText.Name = "NormalBaseToText";
             this.NormalBaseToText.Size = new System.Drawing.Size(118, 21);
             this.NormalBaseToText.TabIndex = 45;
@@ -687,7 +678,7 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(343, 29);
+            this.label31.Location = new System.Drawing.Point(345, 23);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(17, 12);
             this.label31.TabIndex = 46;
@@ -695,7 +686,7 @@
             // 
             // NormalBaseFromText
             // 
-            this.NormalBaseFromText.Location = new System.Drawing.Point(183, 26);
+            this.NormalBaseFromText.Location = new System.Drawing.Point(185, 20);
             this.NormalBaseFromText.Name = "NormalBaseFromText";
             this.NormalBaseFromText.Size = new System.Drawing.Size(118, 21);
             this.NormalBaseFromText.TabIndex = 43;
@@ -705,7 +696,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(147, 29);
+            this.label32.Location = new System.Drawing.Point(149, 23);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(29, 12);
             this.label32.TabIndex = 44;
@@ -716,7 +707,7 @@
             this.NormalBaseList.AllowDrop = true;
             this.NormalBaseList.FormattingEnabled = true;
             this.NormalBaseList.ItemHeight = 12;
-            this.NormalBaseList.Location = new System.Drawing.Point(6, 20);
+            this.NormalBaseList.Location = new System.Drawing.Point(8, 21);
             this.NormalBaseList.Name = "NormalBaseList";
             this.NormalBaseList.Size = new System.Drawing.Size(131, 148);
             this.NormalBaseList.TabIndex = 0;
@@ -730,6 +721,12 @@
             // 
             this.tabTest.AllowDrop = true;
             this.tabTest.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabTest.Controls.Add(this.label64);
+            this.tabTest.Controls.Add(this.label63);
+            this.tabTest.Controls.Add(this.CopyResVersionBtn);
+            this.tabTest.Controls.Add(this.CopyConfBtn);
+            this.tabTest.Controls.Add(this.label62);
+            this.tabTest.Controls.Add(this.label61);
             this.tabTest.Controls.Add(this.copy_notice);
             this.tabTest.Controls.Add(this.copy_base_set);
             this.tabTest.Controls.Add(this.groupBox6);
@@ -738,14 +735,73 @@
             this.tabTest.Location = new System.Drawing.Point(4, 22);
             this.tabTest.Name = "tabTest";
             this.tabTest.Padding = new System.Windows.Forms.Padding(3);
-            this.tabTest.Size = new System.Drawing.Size(940, 567);
+            this.tabTest.Size = new System.Drawing.Size(1065, 657);
             this.tabTest.TabIndex = 1;
             this.tabTest.Text = "测试流程";
+            // 
+            // label64
+            // 
+            this.label64.ForeColor = System.Drawing.Color.Red;
+            this.label64.Location = new System.Drawing.Point(939, 92);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(120, 55);
+            this.label64.TabIndex = 61;
+            this.label64.Text = "5.1 新配置资源如果需要拷贝到其他渠道，勾选左边渠道列表按下方按钮";
+            // 
+            // label63
+            // 
+            this.label63.ForeColor = System.Drawing.Color.Red;
+            this.label63.Location = new System.Drawing.Point(939, 382);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(120, 91);
+            this.label63.TabIndex = 60;
+            this.label63.Text = "5.2 如果有资源版本更新，请在左边提升一个版本号，如果其他渠道也是同样的资源版本号，可以选中之后点击下方按钮同步其他渠道";
+            // 
+            // CopyResVersionBtn
+            // 
+            this.CopyResVersionBtn.Location = new System.Drawing.Point(953, 482);
+            this.CopyResVersionBtn.Name = "CopyResVersionBtn";
+            this.CopyResVersionBtn.Size = new System.Drawing.Size(95, 80);
+            this.CopyResVersionBtn.TabIndex = 59;
+            this.CopyResVersionBtn.Text = "拷贝资源版本配置到其他已勾选渠道";
+            this.CopyResVersionBtn.UseVisualStyleBackColor = true;
+            this.CopyResVersionBtn.Click += new System.EventHandler(this.CopyResVersionBtn_Click);
+            // 
+            // CopyConfBtn
+            // 
+            this.CopyConfBtn.Location = new System.Drawing.Point(953, 153);
+            this.CopyConfBtn.Name = "CopyConfBtn";
+            this.CopyConfBtn.Size = new System.Drawing.Size(95, 80);
+            this.CopyConfBtn.TabIndex = 58;
+            this.CopyConfBtn.Text = "拷贝资源下载配置到其他已勾选渠道";
+            this.CopyConfBtn.UseVisualStyleBackColor = true;
+            this.CopyConfBtn.Click += new System.EventHandler(this.CopyConfBtn_Click);
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.ForeColor = System.Drawing.Color.Red;
+            this.label62.Location = new System.Drawing.Point(404, 27);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(221, 12);
+            this.label62.TabIndex = 57;
+            this.label62.Text = "4.1 可以用Delete删除掉配置错误的内容";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.ForeColor = System.Drawing.Color.Red;
+            this.label61.Location = new System.Drawing.Point(404, 8);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(239, 12);
+            this.label61.TabIndex = 56;
+            this.label61.Text = "4. 将需要配置的资源拖进下方左边的框里面";
             // 
             // copy_notice
             // 
             this.copy_notice.AutoSize = true;
-            this.copy_notice.Location = new System.Drawing.Point(180, 26);
+            this.copy_notice.ForeColor = System.Drawing.Color.Red;
+            this.copy_notice.Location = new System.Drawing.Point(180, 28);
             this.copy_notice.Name = "copy_notice";
             this.copy_notice.Size = new System.Drawing.Size(35, 12);
             this.copy_notice.TabIndex = 55;
@@ -753,11 +809,11 @@
             // 
             // copy_base_set
             // 
-            this.copy_base_set.Location = new System.Drawing.Point(12, 6);
+            this.copy_base_set.Location = new System.Drawing.Point(12, 8);
             this.copy_base_set.Name = "copy_base_set";
             this.copy_base_set.Size = new System.Drawing.Size(89, 71);
             this.copy_base_set.TabIndex = 54;
-            this.copy_base_set.Text = "拷贝基本设置到正式流程";
+            this.copy_base_set.Text = "拷贝测试流程配置到正式流程";
             this.copy_base_set.UseVisualStyleBackColor = true;
             this.copy_base_set.Click += new System.EventHandler(this.copy_base_set_Click);
             this.copy_base_set.MouseEnter += new System.EventHandler(this.copy_base_set_MouseEnter);
@@ -775,7 +831,7 @@
             this.groupBox6.Controls.Add(this.TestPatchFromText);
             this.groupBox6.Controls.Add(this.label22);
             this.groupBox6.Controls.Add(this.TestVersionPatchList);
-            this.groupBox6.Location = new System.Drawing.Point(406, 278);
+            this.groupBox6.Location = new System.Drawing.Point(406, 357);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(527, 283);
             this.groupBox6.TabIndex = 53;
@@ -938,7 +994,7 @@
             this.groupBox5.Controls.Add(this.TestBaseFromText);
             this.groupBox5.Controls.Add(this.label10);
             this.groupBox5.Controls.Add(this.TestVersionBaseList);
-            this.groupBox5.Location = new System.Drawing.Point(406, 6);
+            this.groupBox5.Location = new System.Drawing.Point(406, 60);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(527, 265);
             this.groupBox5.TabIndex = 29;
@@ -1141,10 +1197,13 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.TestResVersion);
-            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Controls.Add(this.groupBox17);
+            this.groupBox3.Controls.Add(this.label60);
             this.groupBox3.Controls.Add(this.ForceUpdateAppTestCheckBox);
+            this.groupBox3.Controls.Add(this.label46);
+            this.groupBox3.Controls.Add(this.label47);
+            this.groupBox3.Controls.Add(this.label44);
+            this.groupBox3.Controls.Add(this.language_test);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.label12);
             this.groupBox3.Controls.Add(this.label11);
@@ -1152,51 +1211,51 @@
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.TestCurrentVersionText);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.TestServerPortText);
+            this.groupBox3.Controls.Add(this.TestServerIpText);
+            this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Controls.Add(this.TestSmallVersionText);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.TestLoginPortText);
+            this.groupBox3.Controls.Add(this.TestLoginIpText);
+            this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.TestAppUrlText);
             this.groupBox3.Controls.Add(this.TestBigVersionText);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Location = new System.Drawing.Point(6, 98);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(394, 463);
+            this.groupBox3.Size = new System.Drawing.Size(394, 544);
             this.groupBox3.TabIndex = 25;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "基本设置";
             // 
-            // label5
+            // groupBox17
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(240, 260);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 12);
-            this.label5.TabIndex = 65;
-            this.label5.Text = "(最新的资源版本)";
+            this.groupBox17.Location = new System.Drawing.Point(392, 152);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(368, 284);
+            this.groupBox17.TabIndex = 64;
+            this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "groupBox17";
             // 
-            // TestResVersion
+            // label60
             // 
-            this.TestResVersion.Location = new System.Drawing.Point(75, 257);
-            this.TestResVersion.Name = "TestResVersion";
-            this.TestResVersion.Size = new System.Drawing.Size(145, 21);
-            this.TestResVersion.TabIndex = 63;
-            this.TestResVersion.TextChanged += new System.EventHandler(this.TestResVersion_TextChanged);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(7, 260);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 12);
-            this.label4.TabIndex = 64;
-            this.label4.Text = "资源版本";
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(8, 388);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(347, 12);
+            this.label60.TabIndex = 63;
+            this.label60.Text = "app下载地址(安卓可以把apk拖进框改地址，ios配appstore地址)";
             // 
             // ForceUpdateAppTestCheckBox
             // 
             this.ForceUpdateAppTestCheckBox.AutoSize = true;
             this.ForceUpdateAppTestCheckBox.Checked = true;
             this.ForceUpdateAppTestCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ForceUpdateAppTestCheckBox.Location = new System.Drawing.Point(131, 294);
+            this.ForceUpdateAppTestCheckBox.Location = new System.Drawing.Point(131, 361);
             this.ForceUpdateAppTestCheckBox.Name = "ForceUpdateAppTestCheckBox";
             this.ForceUpdateAppTestCheckBox.Size = new System.Drawing.Size(72, 16);
             this.ForceUpdateAppTestCheckBox.TabIndex = 62;
@@ -1204,10 +1263,47 @@
             this.ForceUpdateAppTestCheckBox.UseVisualStyleBackColor = true;
             this.ForceUpdateAppTestCheckBox.CheckedChanged += new System.EventHandler(this.ForceUpdateAppTestCheckBox_CheckedChanged);
             // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(107, 118);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(281, 12);
+            this.label46.TabIndex = 60;
+            this.label46.Text = " 0 CHS; 1 CHT; 2 KOR; 3 YHZ; 4 VN; 5 TG; 6 EN;";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(12, 117);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(29, 12);
+            this.label47.TabIndex = 59;
+            this.label47.Text = "语言";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(6, 19);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(197, 12);
+            this.label44.TabIndex = 55;
+            this.label44.Text = "注：服务器IP设成no为关闭测试流程";
+            // 
+            // language_test
+            // 
+            this.language_test.Enabled = false;
+            this.language_test.Location = new System.Drawing.Point(76, 114);
+            this.language_test.Name = "language_test";
+            this.language_test.Size = new System.Drawing.Size(25, 21);
+            this.language_test.TabIndex = 58;
+            this.language_test.TextChanged += new System.EventHandler(this.TestBaseInfoChanged);
+            this.language_test.Leave += new System.EventHandler(this.onFocusChanged);
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(240, 233);
+            this.label13.Location = new System.Drawing.Point(240, 326);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(95, 12);
             this.label13.TabIndex = 45;
@@ -1216,7 +1312,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(240, 203);
+            this.label12.Location = new System.Drawing.Point(240, 296);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(101, 12);
             this.label12.TabIndex = 44;
@@ -1225,7 +1321,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(240, 173);
+            this.label11.Location = new System.Drawing.Point(240, 266);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(101, 12);
             this.label11.TabIndex = 43;
@@ -1233,7 +1329,7 @@
             // 
             // TestAppSizeText
             // 
-            this.TestAppSizeText.Location = new System.Drawing.Point(76, 420);
+            this.TestAppSizeText.Location = new System.Drawing.Point(76, 497);
             this.TestAppSizeText.Name = "TestAppSizeText";
             this.TestAppSizeText.Size = new System.Drawing.Size(144, 21);
             this.TestAppSizeText.TabIndex = 42;
@@ -1243,7 +1339,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(8, 424);
+            this.label9.Location = new System.Drawing.Point(8, 501);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(65, 12);
             this.label9.TabIndex = 41;
@@ -1252,7 +1348,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 233);
+            this.label8.Location = new System.Drawing.Point(6, 326);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(53, 12);
             this.label8.TabIndex = 40;
@@ -1260,17 +1356,56 @@
             // 
             // TestCurrentVersionText
             // 
-            this.TestCurrentVersionText.Location = new System.Drawing.Point(75, 230);
+            this.TestCurrentVersionText.Location = new System.Drawing.Point(75, 323);
             this.TestCurrentVersionText.Name = "TestCurrentVersionText";
             this.TestCurrentVersionText.Size = new System.Drawing.Size(145, 21);
             this.TestCurrentVersionText.TabIndex = 39;
             this.TestCurrentVersionText.TextChanged += new System.EventHandler(this.TestBaseInfoChanged);
             this.TestCurrentVersionText.Leave += new System.EventHandler(this.onFocusChanged);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(240, 50);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(29, 12);
+            this.label7.TabIndex = 38;
+            this.label7.Text = "端口";
+            // 
+            // TestServerPortText
+            // 
+            this.TestServerPortText.Enabled = false;
+            this.TestServerPortText.Location = new System.Drawing.Point(275, 47);
+            this.TestServerPortText.Name = "TestServerPortText";
+            this.TestServerPortText.Size = new System.Drawing.Size(100, 21);
+            this.TestServerPortText.TabIndex = 37;
+            this.TestServerPortText.TextChanged += new System.EventHandler(this.TestBaseInfoChanged);
+            this.TestServerPortText.Leave += new System.EventHandler(this.onFocusChanged);
+            // 
+            // TestServerIpText
+            // 
+            this.TestServerIpText.AllowDrop = true;
+            this.TestServerIpText.Enabled = false;
+            this.TestServerIpText.Location = new System.Drawing.Point(75, 47);
+            this.TestServerIpText.Name = "TestServerIpText";
+            this.TestServerIpText.Size = new System.Drawing.Size(145, 21);
+            this.TestServerIpText.TabIndex = 35;
+            this.TestServerIpText.TextChanged += new System.EventHandler(this.TestBaseInfoChanged);
+            this.TestServerIpText.Leave += new System.EventHandler(this.onFocusChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(7, 50);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(53, 12);
+            this.label6.TabIndex = 36;
+            this.label6.Text = "服务器IP";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 203);
+            this.label2.Location = new System.Drawing.Point(7, 296);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 12);
             this.label2.TabIndex = 34;
@@ -1278,17 +1413,55 @@
             // 
             // TestSmallVersionText
             // 
-            this.TestSmallVersionText.Location = new System.Drawing.Point(75, 200);
+            this.TestSmallVersionText.Location = new System.Drawing.Point(75, 293);
             this.TestSmallVersionText.Name = "TestSmallVersionText";
             this.TestSmallVersionText.Size = new System.Drawing.Size(145, 21);
             this.TestSmallVersionText.TabIndex = 33;
             this.TestSmallVersionText.TextChanged += new System.EventHandler(this.TestBaseInfoChanged);
             this.TestSmallVersionText.Leave += new System.EventHandler(this.onFocusChanged);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(240, 78);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(29, 12);
+            this.label5.TabIndex = 32;
+            this.label5.Text = "端口";
+            // 
+            // TestLoginPortText
+            // 
+            this.TestLoginPortText.Enabled = false;
+            this.TestLoginPortText.Location = new System.Drawing.Point(275, 75);
+            this.TestLoginPortText.Name = "TestLoginPortText";
+            this.TestLoginPortText.Size = new System.Drawing.Size(100, 21);
+            this.TestLoginPortText.TabIndex = 31;
+            this.TestLoginPortText.TextChanged += new System.EventHandler(this.TestBaseInfoChanged);
+            this.TestLoginPortText.Leave += new System.EventHandler(this.onFocusChanged);
+            // 
+            // TestLoginIpText
+            // 
+            this.TestLoginIpText.Enabled = false;
+            this.TestLoginIpText.Location = new System.Drawing.Point(75, 75);
+            this.TestLoginIpText.Name = "TestLoginIpText";
+            this.TestLoginIpText.Size = new System.Drawing.Size(145, 21);
+            this.TestLoginIpText.TabIndex = 29;
+            this.TestLoginIpText.TextChanged += new System.EventHandler(this.TestBaseInfoChanged);
+            this.TestLoginIpText.Leave += new System.EventHandler(this.onFocusChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(7, 78);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 12);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "登录IP";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 297);
+            this.label3.Location = new System.Drawing.Point(7, 364);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 12);
             this.label3.TabIndex = 28;
@@ -1297,7 +1470,7 @@
             // TestAppUrlText
             // 
             this.TestAppUrlText.AllowDrop = true;
-            this.TestAppUrlText.Location = new System.Drawing.Point(7, 331);
+            this.TestAppUrlText.Location = new System.Drawing.Point(7, 413);
             this.TestAppUrlText.Multiline = true;
             this.TestAppUrlText.Name = "TestAppUrlText";
             this.TestAppUrlText.Size = new System.Drawing.Size(369, 74);
@@ -1309,7 +1482,7 @@
             // 
             // TestBigVersionText
             // 
-            this.TestBigVersionText.Location = new System.Drawing.Point(75, 170);
+            this.TestBigVersionText.Location = new System.Drawing.Point(75, 263);
             this.TestBigVersionText.Name = "TestBigVersionText";
             this.TestBigVersionText.Size = new System.Drawing.Size(145, 21);
             this.TestBigVersionText.TabIndex = 24;
@@ -1319,7 +1492,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 173);
+            this.label1.Location = new System.Drawing.Point(7, 266);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 12);
             this.label1.TabIndex = 25;
@@ -1333,7 +1506,7 @@
             this.tabDll.Controls.Add(this.groupBox15);
             this.tabDll.Location = new System.Drawing.Point(4, 22);
             this.tabDll.Name = "tabDll";
-            this.tabDll.Size = new System.Drawing.Size(940, 567);
+            this.tabDll.Size = new System.Drawing.Size(1065, 657);
             this.tabDll.TabIndex = 4;
             this.tabDll.Text = "DLL热更";
             // 
@@ -1597,7 +1770,7 @@
             this.tabWhiteList.Controls.Add(this.groupBox12);
             this.tabWhiteList.Location = new System.Drawing.Point(4, 22);
             this.tabWhiteList.Name = "tabWhiteList";
-            this.tabWhiteList.Size = new System.Drawing.Size(940, 567);
+            this.tabWhiteList.Size = new System.Drawing.Size(1065, 657);
             this.tabWhiteList.TabIndex = 3;
             this.tabWhiteList.Text = "白名单";
             // 
@@ -1665,16 +1838,119 @@
             // 
             this.ErrorMsg.AutoSize = true;
             this.ErrorMsg.ForeColor = System.Drawing.Color.Red;
-            this.ErrorMsg.Location = new System.Drawing.Point(10, 661);
+            this.ErrorMsg.Location = new System.Drawing.Point(10, 745);
             this.ErrorMsg.Name = "ErrorMsg";
             this.ErrorMsg.Size = new System.Drawing.Size(0, 12);
             this.ErrorMsg.TabIndex = 2;
+            // 
+            // operationBtn
+            // 
+            this.operationBtn.Image = global::ResourceConfig.Properties.Resources.question1;
+            this.operationBtn.Location = new System.Drawing.Point(1283, 8);
+            this.operationBtn.Name = "operationBtn";
+            this.operationBtn.Size = new System.Drawing.Size(30, 30);
+            this.operationBtn.TabIndex = 3;
+            this.operationBtn.UseVisualStyleBackColor = true;
+            this.operationBtn.Click += new System.EventHandler(this.operationBtn_Click);
+            // 
+            // NoticeContent
+            // 
+            this.NoticeContent.Location = new System.Drawing.Point(6, 61);
+            this.NoticeContent.Multiline = true;
+            this.NoticeContent.Name = "NoticeContent";
+            this.NoticeContent.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.NoticeContent.Size = new System.Drawing.Size(418, 468);
+            this.NoticeContent.TabIndex = 0;
+            this.NoticeContent.TextChanged += new System.EventHandler(this.NoticeTextChanged);
+            this.NoticeContent.Leave += new System.EventHandler(this.onFocusChanged);
+            // 
+            // NoticeTitle
+            // 
+            this.NoticeTitle.Location = new System.Drawing.Point(7, 21);
+            this.NoticeTitle.Name = "NoticeTitle";
+            this.NoticeTitle.Size = new System.Drawing.Size(417, 21);
+            this.NoticeTitle.TabIndex = 1;
+            this.NoticeTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.NoticeTitle.TextChanged += new System.EventHandler(this.NoticeTextChanged);
+            this.NoticeTitle.Leave += new System.EventHandler(this.onFocusChanged);
+            // 
+            // Notice1
+            // 
+            this.Notice1.Location = new System.Drawing.Point(6, 37);
+            this.Notice1.Multiline = true;
+            this.Notice1.Name = "Notice1";
+            this.Notice1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.Notice1.Size = new System.Drawing.Size(486, 83);
+            this.Notice1.TabIndex = 1;
+            this.Notice1.TextChanged += new System.EventHandler(this.NoticeTextChanged);
+            this.Notice1.Leave += new System.EventHandler(this.onFocusChanged);
+            // 
+            // Notice2
+            // 
+            this.Notice2.Location = new System.Drawing.Point(6, 141);
+            this.Notice2.Multiline = true;
+            this.Notice2.Name = "Notice2";
+            this.Notice2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.Notice2.Size = new System.Drawing.Size(486, 83);
+            this.Notice2.TabIndex = 2;
+            this.Notice2.TextChanged += new System.EventHandler(this.NoticeTextChanged);
+            this.Notice2.Leave += new System.EventHandler(this.onFocusChanged);
+            // 
+            // Notice3
+            // 
+            this.Notice3.Location = new System.Drawing.Point(6, 241);
+            this.Notice3.Multiline = true;
+            this.Notice3.Name = "Notice3";
+            this.Notice3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.Notice3.Size = new System.Drawing.Size(486, 83);
+            this.Notice3.TabIndex = 3;
+            this.Notice3.TextChanged += new System.EventHandler(this.NoticeTextChanged);
+            this.Notice3.Leave += new System.EventHandler(this.onFocusChanged);
+            // 
+            // Notice4
+            // 
+            this.Notice4.Location = new System.Drawing.Point(6, 339);
+            this.Notice4.Multiline = true;
+            this.Notice4.Name = "Notice4";
+            this.Notice4.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.Notice4.Size = new System.Drawing.Size(486, 83);
+            this.Notice4.TabIndex = 4;
+            this.Notice4.TextChanged += new System.EventHandler(this.NoticeTextChanged);
+            this.Notice4.Leave += new System.EventHandler(this.onFocusChanged);
+            // 
+            // Notice5
+            // 
+            this.Notice5.Location = new System.Drawing.Point(6, 438);
+            this.Notice5.Multiline = true;
+            this.Notice5.Name = "Notice5";
+            this.Notice5.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.Notice5.Size = new System.Drawing.Size(486, 83);
+            this.Notice5.TabIndex = 2;
+            this.Notice5.TextChanged += new System.EventHandler(this.NoticeTextChanged);
+            this.Notice5.Leave += new System.EventHandler(this.onFocusChanged);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(239, 98);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(67, 21);
+            this.textBox2.TabIndex = 59;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(314, 94);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(86, 31);
+            this.button6.TabIndex = 60;
+            this.button6.Text = "删除指定版本";
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 682);
+            this.ClientSize = new System.Drawing.Size(1401, 772);
+            this.Controls.Add(this.operationBtn);
             this.Controls.Add(this.ErrorMsg);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -1689,10 +1965,11 @@
             this.groupBox2.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
             this.tabNormal.ResumeLayout(false);
+            this.tabNormal.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.tabTest.ResumeLayout(false);
@@ -1726,62 +2003,43 @@
         public System.Windows.Forms.Button button1;
         public System.Windows.Forms.CheckedListBox ResourceList;
         public System.Windows.Forms.GroupBox groupBox2;
-        public System.Windows.Forms.Label ErrorMsg;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem CopyToNormal1;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
-        private System.Windows.Forms.ToolStripMenuItem CopyToNormal;
-        private System.Windows.Forms.ToolStripMenuItem Copy;
-        private System.Windows.Forms.ToolStripMenuItem Paste;
-        private System.Windows.Forms.ToolStripMenuItem Paste1;
-        private System.Windows.Forms.ToolStripMenuItem Copy1;
-        private System.Windows.Forms.TextBox textBox_timeout;
-        private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.CheckBox connectModel;
         public System.Windows.Forms.TabControl tabControl1;
         public System.Windows.Forms.TabPage tabNormal;
-        public System.Windows.Forms.GroupBox groupBox9;
-        public System.Windows.Forms.CheckBox ForceUpdateAppCheckBox;
-        public System.Windows.Forms.TextBox NormalAppSizeText;
-        public System.Windows.Forms.Label label37;
-        public System.Windows.Forms.TextBox NormalAppUrlText;
-        public System.Windows.Forms.Label label36;
-        public System.Windows.Forms.TextBox NormalAppVersionText;
-        public System.Windows.Forms.Label label35;
-        public System.Windows.Forms.GroupBox groupBox4;
-        public System.Windows.Forms.TextBox NormalPatchSizeText;
-        public System.Windows.Forms.Label label23;
-        public System.Windows.Forms.TextBox NormalPatchMd5Text;
-        public System.Windows.Forms.Label label24;
-        public System.Windows.Forms.TextBox NormalPatchUrlText;
-        public System.Windows.Forms.Label label25;
-        public System.Windows.Forms.TextBox NormalPatchToText;
-        public System.Windows.Forms.Label label26;
-        public System.Windows.Forms.TextBox NormalPatchFromText;
-        public System.Windows.Forms.Label label27;
-        public System.Windows.Forms.ListBox NormalPatchList;
-        public System.Windows.Forms.GroupBox groupBox7;
-        public System.Windows.Forms.TextBox NormalBaseMapSize;
-        public System.Windows.Forms.Label label38;
-        public System.Windows.Forms.TextBox NormalBaseMapMD5;
-        public System.Windows.Forms.Label label39;
-        public System.Windows.Forms.TextBox NormalBaseMapUrl;
-        public System.Windows.Forms.Label label40;
-        public System.Windows.Forms.TextBox NormalBaseSizeText;
-        public System.Windows.Forms.Label label28;
-        public System.Windows.Forms.TextBox NormalBaseMd5Text;
-        public System.Windows.Forms.Label label29;
-        public System.Windows.Forms.TextBox NormalBaseUrlText;
-        public System.Windows.Forms.Label label30;
-        public System.Windows.Forms.TextBox NormalBaseToText;
-        public System.Windows.Forms.Label label31;
-        public System.Windows.Forms.TextBox NormalBaseFromText;
-        public System.Windows.Forms.Label label32;
-        public System.Windows.Forms.ListBox NormalBaseList;
         public System.Windows.Forms.TabPage tabTest;
-        private System.Windows.Forms.Label copy_notice;
-        private System.Windows.Forms.Button copy_base_set;
+        public System.Windows.Forms.GroupBox groupBox3;
+        public System.Windows.Forms.Label label8;
+        public System.Windows.Forms.TextBox TestCurrentVersionText;
+        public System.Windows.Forms.Label label7;
+        public System.Windows.Forms.TextBox TestServerPortText;
+        public System.Windows.Forms.TextBox TestServerIpText;
+        public System.Windows.Forms.Label label6;
+        public System.Windows.Forms.Label label2;
+        public System.Windows.Forms.TextBox TestSmallVersionText;
+        public System.Windows.Forms.Label label5;
+        public System.Windows.Forms.TextBox TestLoginPortText;
+        public System.Windows.Forms.TextBox TestLoginIpText;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Label label3;
+        public System.Windows.Forms.TextBox TestAppUrlText;
+        public System.Windows.Forms.TextBox TestBigVersionText;
+        public System.Windows.Forms.Label label1;
+        public System.Windows.Forms.GroupBox groupBox5;
+        public System.Windows.Forms.TextBox TestBaseFromText;
+        public System.Windows.Forms.Label label10;
+        public System.Windows.Forms.ListBox TestVersionBaseList;
+        public System.Windows.Forms.TextBox TestAppSizeText;
+        public System.Windows.Forms.Label label9;
+        public System.Windows.Forms.Label label13;
+        public System.Windows.Forms.Label label12;
+        public System.Windows.Forms.Label label11;
+        public System.Windows.Forms.TextBox TestBaseSizeText;
+        public System.Windows.Forms.Label label17;
+        public System.Windows.Forms.TextBox TestBaseMD5Text;
+        public System.Windows.Forms.Label label16;
+        public System.Windows.Forms.TextBox TestBaseUrlText;
+        public System.Windows.Forms.Label label15;
+        public System.Windows.Forms.TextBox TestBaseToText;
+        public System.Windows.Forms.Label label14;
         public System.Windows.Forms.GroupBox groupBox6;
         public System.Windows.Forms.TextBox TestPatchSizeText;
         public System.Windows.Forms.Label label18;
@@ -1794,43 +2052,80 @@
         public System.Windows.Forms.TextBox TestPatchFromText;
         public System.Windows.Forms.Label label22;
         public System.Windows.Forms.ListBox TestVersionPatchList;
-        public System.Windows.Forms.GroupBox groupBox5;
+        public System.Windows.Forms.GroupBox groupBox9;
+        public System.Windows.Forms.GroupBox groupBox8;
+        public System.Windows.Forms.GroupBox groupBox7;
+        public System.Windows.Forms.TextBox NormalBaseSizeText;
+        public System.Windows.Forms.Label label28;
+        public System.Windows.Forms.TextBox NormalBaseMd5Text;
+        public System.Windows.Forms.Label label29;
+        public System.Windows.Forms.TextBox NormalBaseUrlText;
+        public System.Windows.Forms.Label label30;
+        public System.Windows.Forms.TextBox NormalBaseToText;
+        public System.Windows.Forms.Label label31;
+        public System.Windows.Forms.TextBox NormalBaseFromText;
+        public System.Windows.Forms.Label label32;
+        public System.Windows.Forms.ListBox NormalBaseList;
+        public System.Windows.Forms.TextBox NormalAppSizeText;
+        public System.Windows.Forms.Label label37;
+        public System.Windows.Forms.TextBox NormalAppUrlText;
+        public System.Windows.Forms.Label label36;
+        public System.Windows.Forms.Label label35;
+        public System.Windows.Forms.TabPage tabWhiteList;
+        public System.Windows.Forms.GroupBox groupBox12;
+        public System.Windows.Forms.GroupBox groupBox13;
+        public System.Windows.Forms.GroupBox groupBox14;
+        public System.Windows.Forms.RichTextBox WhiteListText;
+        public System.Windows.Forms.RichTextBox MACText;
+        public System.Windows.Forms.RichTextBox IMEIText;
+        public System.Windows.Forms.TextBox NormalAppVersionText;
+        public System.Windows.Forms.Label ErrorMsg;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem CopyToNormal1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem CopyToNormal;
+        private System.Windows.Forms.ToolStripMenuItem Copy;
+        private System.Windows.Forms.ToolStripMenuItem Paste;
+        private System.Windows.Forms.ToolStripMenuItem Paste1;
+        private System.Windows.Forms.ToolStripMenuItem Copy1;
+        public System.Windows.Forms.TextBox NormalBaseMapSize;
+        public System.Windows.Forms.Label label38;
+        public System.Windows.Forms.TextBox NormalBaseMapMD5;
+        public System.Windows.Forms.Label label39;
+        public System.Windows.Forms.TextBox NormalBaseMapUrl;
+        public System.Windows.Forms.Label label40;
         public System.Windows.Forms.TextBox TestBaseMapSize;
         public System.Windows.Forms.Label label41;
         public System.Windows.Forms.TextBox TestBaseMapMD5;
         public System.Windows.Forms.Label label42;
         public System.Windows.Forms.TextBox TestBaseMapUrl;
         public System.Windows.Forms.Label label43;
-        public System.Windows.Forms.TextBox TestBaseSizeText;
-        public System.Windows.Forms.Label label17;
-        public System.Windows.Forms.TextBox TestBaseMD5Text;
-        public System.Windows.Forms.Label label16;
-        public System.Windows.Forms.TextBox TestBaseUrlText;
-        public System.Windows.Forms.Label label15;
-        public System.Windows.Forms.TextBox TestBaseToText;
-        public System.Windows.Forms.Label label14;
-        public System.Windows.Forms.TextBox TestBaseFromText;
-        public System.Windows.Forms.Label label10;
-        public System.Windows.Forms.ListBox TestVersionBaseList;
-        public System.Windows.Forms.GroupBox groupBox3;
-        public System.Windows.Forms.CheckBox ForceUpdateAppTestCheckBox;
-        public System.Windows.Forms.Label label13;
-        public System.Windows.Forms.Label label12;
-        public System.Windows.Forms.Label label11;
-        public System.Windows.Forms.TextBox TestAppSizeText;
-        public System.Windows.Forms.Label label9;
-        public System.Windows.Forms.Label label8;
-        public System.Windows.Forms.TextBox TestCurrentVersionText;
-        public System.Windows.Forms.Label label2;
-        public System.Windows.Forms.TextBox TestSmallVersionText;
-        public System.Windows.Forms.Label label3;
-        public System.Windows.Forms.TextBox TestAppUrlText;
-        public System.Windows.Forms.TextBox TestBigVersionText;
-        public System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Button copy_base_set;
+        private System.Windows.Forms.Label copy_notice;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label languageLable;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        public System.Windows.Forms.TextBox language_test;
+        public System.Windows.Forms.TextBox language;
+        private System.Windows.Forms.TextBox textBox_timeout;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.CheckBox connectModel;
+        public System.Windows.Forms.CheckBox ForceUpdateAppCheckBox;
         public System.Windows.Forms.TabPage tabDll;
+        public System.Windows.Forms.GroupBox groupBox15;
+        public System.Windows.Forms.TextBox DLLDownloadBox;
+        public System.Windows.Forms.ListBox DllUpdateListBox;
+        public System.Windows.Forms.Label label52;
+        public System.Windows.Forms.Label label51;
+        public System.Windows.Forms.Label label50;
+        public System.Windows.Forms.Label label49;
+        public System.Windows.Forms.TextBox DLLSize;
+        public System.Windows.Forms.TextBox DLLMD5;
         public System.Windows.Forms.Button DLLCopyBtn;
         public System.Windows.Forms.GroupBox groupBox16;
-        public System.Windows.Forms.Button button5;
         public System.Windows.Forms.Label label53;
         public System.Windows.Forms.Label label54;
         public System.Windows.Forms.Label label55;
@@ -1839,28 +2134,34 @@
         public System.Windows.Forms.TextBox DLLTestMD5;
         public System.Windows.Forms.TextBox DLLTestDownloadBox;
         public System.Windows.Forms.ListBox DLLUpdateTestListBox;
-        public System.Windows.Forms.GroupBox groupBox15;
+        public System.Windows.Forms.CheckBox ForceUpdateAppTestCheckBox;
+        public System.Windows.Forms.Button button5;
         public System.Windows.Forms.Button button4;
-        public System.Windows.Forms.Label label52;
-        public System.Windows.Forms.Label label51;
-        public System.Windows.Forms.Label label50;
-        public System.Windows.Forms.Label label49;
-        public System.Windows.Forms.TextBox DLLSize;
-        public System.Windows.Forms.TextBox DLLMD5;
-        public System.Windows.Forms.TextBox DLLDownloadBox;
-        public System.Windows.Forms.ListBox DllUpdateListBox;
-        public System.Windows.Forms.TabPage tabWhiteList;
-        public System.Windows.Forms.GroupBox groupBox14;
-        public System.Windows.Forms.RichTextBox WhiteListText;
-        public System.Windows.Forms.GroupBox groupBox13;
-        public System.Windows.Forms.RichTextBox MACText;
-        public System.Windows.Forms.GroupBox groupBox12;
-        public System.Windows.Forms.RichTextBox IMEIText;
-        public System.Windows.Forms.TextBox NormalResVersionBox;
-        public System.Windows.Forms.Label label33;
-        public System.Windows.Forms.Label label5;
-        public System.Windows.Forms.TextBox TestResVersion;
-        public System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label57;
+        public System.Windows.Forms.Label label60;
+        private System.Windows.Forms.GroupBox groupBox17;
+        private System.Windows.Forms.Button operationBtn;
+        public System.Windows.Forms.TextBox NoticeContent;
+        public System.Windows.Forms.TextBox NoticeTitle;
+        public System.Windows.Forms.TextBox Notice1;
+        public System.Windows.Forms.TextBox Notice2;
+        public System.Windows.Forms.TextBox Notice3;
+        public System.Windows.Forms.TextBox Notice4;
+        public System.Windows.Forms.TextBox Notice5;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.Button CopyConfBtn;
+        private System.Windows.Forms.Button CopyResVersionBtn;
+        private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.Label label64;
+        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.Label label23;
+        public System.Windows.Forms.ComboBox ValidVersionComboBox;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Button button6;
+        public System.Windows.Forms.TextBox textBox2;
     }
 }
 

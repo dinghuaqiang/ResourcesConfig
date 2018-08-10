@@ -32,5 +32,17 @@ namespace ResourceConfig.Model
                 box.SelectedIndex = 0;
             }
         }
+
+        public void InitComBoBox(ComboBox box, List<string> verList)
+        {
+            for (int i = 0; i < verList.Count; i++)
+            {
+                box.Items.Add(verList[i]);
+            }
+            if (box.Items.Count > 0)
+            {
+                box.SelectedIndex = 0;
+            }
+        }
     }
 }

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ResourceVersion>
   <!-- server list, use when login -->
   <serverListURL>http://serverlist.funcell123.com/serverlist</serverListURL>
@@ -119,7 +119,7 @@
   <game_notice_title>【凡仙公告】</game_notice_title>
   <game_notice_message>
   </game_notice_message>
-  <ForceUpdate>False</ForceUpdate>
+  <ForceUpdate>True</ForceUpdate>
   <VersionBase>
     <FromVersion>0</FromVersion>
     <ToVersion>1</ToVersion>

@@ -1,108 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <project name="六扇门">
   <ftp>
-    <ip>118.89.232.211</ip>
+    <ip>123.206.82.217</ip>
     <port>2101</port>
-    <account>lsm_xml_upload</account>
-    <pwd>H+ADo3QMpl4IiL6dnVvfbJuArxcPQE41</pwd>
+    <account>yzry_yanfa_upload_cdn</account>
+    <pwd>eniyAVYLy6nkRKN1iQTdf0WzqGlXDn6q</pwd>
   </ftp>
-  <platform name="_____RemoteVersion Test" type="Android">
-    <ftpUrl>/liushanmen/test/RemoteVersion.xml</ftpUrl>
+  <platform name="_____勇者____小米" type="Android">
+    <ftpUrl>/android/RemoteVersion.xml</ftpUrl>
   </platform>
-  <platform name="_____六扇门____BT_绿岸" type="Android">
-    <ftpUrl>/liushanmen/android/iwgame/RemoteVersion.xml</ftpUrl>
+  <platform name="_____勇者____华为" type="Android">
+    <ftpUrl>/android/yumoon/RemoteVersion.xml</ftpUrl>
   </platform>
-  <platform name="_____六扇门____BT_CGAME" type="Android">
-    <ftpUrl>/liushanmen/android/sifuba/RemoteVersion.xml</ftpUrl>
-  </platform>
-  <platform name="_____六扇门____BT_185" type="Android">
-    <ftpUrl>/liushanmen/android/185sy/RemoteVersion.xml</ftpUrl>
-  </platform>
-  <platform name="_____六扇门____版署" type="Android">
-    <ftpUrl>/liushanmen/android/lvanclub/RemoteVersion.xml</ftpUrl>
-  </platform>
-  <platform name="_____六扇门____版署" type="IOS">
-    <ftpUrl>/liushanmen/ios/banshu/RemoteVersion.xml</ftpUrl>
-  </platform>
-  <platform name="_____六扇门____funcell_乐豆" type="Android">
-    <ftpUrl>/liushanmen/android/funcelll/RemoteVersion.xml</ftpUrl>
-  </platform>
-  <platform name="_____六扇门____funcell" type="Android">
-    <ftpUrl>/liushanmen/android/funcell/RemoteVersion.xml</ftpUrl>
-  </platform>
-  <platform name="_____六扇门____绿岸" type="Android">
-    <ftpUrl>/liushanmen/android/lvanclub/RemoteVersion.xml</ftpUrl>
-  </platform>
-  <platform name="_____六扇门____uc(自更)" type="Android">
-    <ftpUrl>/liushanmen/android/uc/RemoteVersion.xml</ftpUrl>
-  </platform>
-  <platform name="_____六扇门____优酷(自更)" type="Android">
-    <ftpUrl>/liushanmen/android/youku/RemoteVersion.xml</ftpUrl>
-  </platform>
-  <platform name="_____六扇门____pptv(自更)" type="Android">
-    <ftpUrl>/liushanmen/android/pptv/RemoteVersion.xml</ftpUrl>
-  </platform>
-  <platform name="_____六扇门____快用(仅资源)" type="Android">
-    <ftpUrl>/liushanmen/android/kuaiyong_and/RemoteVersion.xml</ftpUrl>
-  </platform>
-  <platform name="_____六扇门____360" type="Android">
-    <ftpUrl>/liushanmen/android/360/RemoteVersion.xml</ftpUrl>
-  </platform>
-    <platform name="_____六扇门____xiaomi" type="Android">
-    <ftpUrl>/liushanmen/android/xiaomi/RemoteVersion.xml</ftpUrl>
-  </platform>
-  <platform name="_____六扇门____bbg步步高" type="Android">
-    <ftpUrl>/liushanmen/android/bbg/RemoteVersion.xml</ftpUrl>
-  </platform>
-    <platform name="_____六扇门____oppo" type="Android">
-    <ftpUrl>/liushanmen/android/oppo/RemoteVersion.xml</ftpUrl>
-  </platform>
-  <platform name="_____六扇门____游戏多" type="Android">
-    <ftpUrl>/liushanmen/android/youxiduo/RemoteVersion.xml</ftpUrl>
-  </platform>
-    <platform name="_____六扇门____huawei（自更）" type="Android">
-    <ftpUrl>/liushanmen/android/huawei/RemoteVersion.xml</ftpUrl>
-  </platform>
-    <platform name="_____六扇门____百度duoku" type="Android">
-    <ftpUrl>/liushanmen/android/duoku/RemoteVersion.xml</ftpUrl>
-  </platform>
-  <platform name="_____六扇门____应用宝" type="Android">
-    <ftpUrl>/liushanmen/android/yybao/RemoteVersion.xml</ftpUrl>
-  </platform>
-  <platform name="_____六扇门____联想" type="Android">
-    <ftpUrl>/liushanmen/android/lenovo/RemoteVersion.xml</ftpUrl>
-  </platform>
-  <platform name="_____六扇门____金立（自更）" type="Android">
-    <ftpUrl>/liushanmen/android/amigo/RemoteVersion.xml</ftpUrl>
-  </platform>
-  <platform name="_____六扇门____酷派" type="Android">
-    <ftpUrl>/liushanmen/android/kupai/RemoteVersion.xml</ftpUrl>
-  </platform>
-  <platform name="_____六扇门____魅族" type="Android">
-    <ftpUrl>/liushanmen/android/meizu/RemoteVersion.xml</ftpUrl>
-  </platform>
-  <platform name="_____六扇门____乐TV" type="Android">
-    <ftpUrl>/liushanmen/android/letv/RemoteVersion.xml</ftpUrl>
-  </platform>
-  <platform name="_____六扇门____pps" type="Android">
-    <ftpUrl>/liushanmen/android/pps/RemoteVersion.xml</ftpUrl>
-  </platform>
-  <platform name="_____六扇门____185sy" type="IOS">
-    <ftpUrl>/liushanmen/ios/185sy/RemoteVersion.xml</ftpUrl>
-  </platform>
-  <platform name="_____六扇门____appstore首包" type="IOS">
-    <ftpUrl>/liushanmen/ios/appstore/RemoteVersion.xml</ftpUrl>
-  </platform>
-  <platform name="_____六扇门____appstore2整包" type="IOS">
-    <ftpUrl>/liushanmen/ios/appstore2/RemoteVersion.xml</ftpUrl>
-  </platform>
-  <platform name="_____六扇门____app首包更新测试用" type="IOS">
-    <ftpUrl>/liushanmen/ios/apptest/RemoteVersion.xml</ftpUrl>
-  </platform>
-  <platform name="_____六扇门____app整包更新测试用" type="IOS">
-    <ftpUrl>/liushanmen/ios/apptest2/RemoteVersion.xml</ftpUrl>
-  </platform>
-  <platform name="_____六扇门____快用(自更)" type="IOS">
-    <ftpUrl>/liushanmen/ios/kuaiyong/RemoteVersion.xml</ftpUrl>
+  <platform name="_____勇者____魅族" type="Android">
+    <ftpUrl>/YZTest/meizu/RemoteVersion.xml</ftpUrl>
   </platform>
 </project>
